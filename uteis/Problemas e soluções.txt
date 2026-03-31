@@ -1,0 +1,57 @@
+Problemas
+
+1. Falta de adequação à LGPD
+Empresas estão negligenciando a necessidade de se adequar à LGPD, sem clareza sobre requisitos, riscos e obrigações legais relacionadas ao tratamento de dados.
+
+2. Ausência de políticas e normas de acesso
+Não existem regras bem definidas sobre quem pode acessar quais dados, como esse acesso é concedido e controlado, gerando risco de vazamentos e uso indevido.
+
+3. Falta de cultura e conscientização
+Colaboradores não possuem conhecimento sobre segurança da informação e proteção de dados, e não há նախաձեռնativas estruturadas de treinamento ou educação interna.
+
+4. Inexistência de plano de contingência
+A empresa não possui um plano estruturado para responder a incidentes (ex: vazamento de dados, ataques, falhas), dificultando ações rápidas de mitigação e recuperação.
+
+Soluções
+
+1. Diagnóstico e adequação à LGPD
+Realizar um levantamento completo do cenário atual da empresa, identificando:
+
+Canais de comunicação
+Fluxos de dados
+Pontos de coleta, armazenamento e tratamento
+
+A partir disso:
+
+Criar um checklist estruturado de adequação
+Definir ações necessárias
+Estabelecer rotinas de manutenção e conformidade contínua
+
+2. Estruturação de políticas e normas de acesso
+Desenvolver e implementar políticas claras de acesso à informação, incluindo:
+
+Definição de perfis de acesso (quem acessa o quê)
+Regras de autenticação e autorização
+Procedimentos de concessão e revogação de acesso
+
+Seguindo a mesma lógica:
+
+Criar checklist de implementação
+Definir controles e auditorias periódicas
+
+3. Programa de conscientização e treinamento
+Criar iniciativas para educar os colaboradores, como:
+
+Trilhas de aprendizado sobre segurança da informação e LGPD
+Conteúdos práticos (ex: boas práticas, phishing, uso de dados)
+Treinamentos recorrentes e campanhas internas
+
+Objetivo: desenvolver uma cultura de segurança e privacidade na empresa.
+
+4. Plano de contingência e resposta a incidentes
+Desenvolver um plano baseado no ambiente da empresa, incluindo:
+
+Mapeamento de possíveis incidentes (vazamento, ataque, falha sistêmica)
+Definição de ações de resposta (mitigar, conter, recuperar)
+Responsáveis e fluxos de comunicação
+Procedimentos de continuidade do negócio
