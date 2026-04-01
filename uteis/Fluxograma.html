@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Framework de Governança de Dados — PDCA</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --plan:   #1A56E8;
+    --do:     #0DA070;
+    --check:  #D97B10;
+    --act:    #C93535;
+    --bg:     #0D0D0F;
+    --surface:#141418;
+    --border: rgba(255,255,255,0.07);
+    --text:   #F0EEE8;
+    --muted:  rgba(240,238,232,0.45);
+    --mono:   'DM Mono', monospace;
+    --sans:   'Syne', sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 24px 80px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .header .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+  .header h1 span { color: var(--plan); }
+
+  /* Flow wrapper */
+  .flow {
+    width: 100%;
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Each PDCA phase card */
+  .phase {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    padding: 28px 32px 32px;
+    position: relative;
+    transition: border-color 0.25s;
+  }
+  .phase:hover { border-color: var(--accent); }
+
+  .phase-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .phase-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: var(--accent);
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .phase-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .phase-desc {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+    line-height: 1.6;
+  }
+
+  /* Sub-items grid */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+  }
+  .step {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .step-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .step-detail {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* Color per phase */
+  .plan  { --accent: var(--plan);  }
+  .do    { --accent: var(--do);    }
+  .check { --accent: var(--check); }
+  .act   { --accent: var(--act);   }
+
+  /* Connector arrows between phases */
+  .connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 8px 0;
+  }
+  .conn-line {
+    width: 2px;
+    height: 28px;
+    background: linear-gradient(to bottom, var(--from), var(--to));
+    opacity: 0.5;
+  }
+  .conn-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--to);
+    opacity: 0.6;
+  }
+
+  /* Cycle return */
+  .cycle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 44px;
+    padding: 18px 28px;
+    border: 1px dashed rgba(255,255,255,0.12);
+    border-radius: 12px;
+    max-width: 860px;
+    width: 100%;
+  }
+  .cycle-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .cycle-text h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .cycle-text p {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* Dashboard callout */
+  .dashboard-callout {
+    margin-top: 16px;
+    max-width: 860px;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(26,86,232,0.12), rgba(13,160,112,0.08));
+    border: 1px solid rgba(26,86,232,0.25);
+    border-radius: 12px;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .dashboard-callout .icon { font-size: 24px; flex-shrink: 0; }
+  .dashboard-callout h3 { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+  .dashboard-callout p { font-family: var(--mono); font-size: 11px; color: var(--muted); line-height: 1.6; }
+
+  /* Footer */
+  .footer {
+    margin-top: 60px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  /* Fade-in animation */
+  .phase, .connector, .cycle-wrap, .dashboard-callout {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadein 0.5s ease forwards;
+  }
+  .phase.plan           { animation-delay: 0.05s; }
+  .connector.c1         { animation-delay: 0.15s; }
+  .phase.do             { animation-delay: 0.20s; }
+  .connector.c2         { animation-delay: 0.30s; }
+  .phase.check          { animation-delay: 0.35s; }
+  .connector.c3         { animation-delay: 0.45s; }
+  .phase.act            { animation-delay: 0.50s; }
+  .cycle-wrap           { animation-delay: 0.60s; }
+  .dashboard-callout    { animation-delay: 0.65s; }
+
+  @keyframes fadein {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="eyebrow">data-trust · framework de governança</div>
+  <h1>Ciclo <span>PDCA</span><br>Governança de Dados</h1>
+</div>
+
+<div class="flow">
+
+  <!-- PLAN -->
+  <div class="phase plan">
+    <div class="phase-header">
+      <span class="phase-tag">01 · Plan</span>
+      <div>
+        <div class="phase-title">Planejar</div>
+        <div class="phase-desc">Diagnóstico do cenário atual, mapeamento de dados e definição das ações necessárias.</div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-name">Diagnóstico</div>
+        <div class="step-detail">Levantamento do cenário atual e identificação de lacunas</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Mapeamento de dados</div>
+        <div class="step-detail">Fluxos, coleta, armazenamento e tratamento de dados</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Adequação à LGPD</div>
+        <div class="step-detail">Checklist estruturado e definição de ações de conformidade</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector c1">
+    <div class="conn-line" style="--from: var(--plan); --to: var(--do);"></div>
+    <div class="conn-arrow" style="--to: var(--do);"></div>
+  </div>
+
+  <!-- DO -->
+  <div class="phase do">
+    <div class="phase-header">
+      <span class="phase-tag">02 · Do</span>
+      <div>
+        <div class="phase-title">Executar</div>
+        <div class="phase-desc">Implementação das políticas, controles de acesso, treinamentos e plano de resposta a incidentes.</div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-name">Políticas e normas</div>
+        <div class="step-detail">Regras de acesso, autenticação e autorização</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Controle de acessos</div>
+        <div class="step-detail">Perfis, concessão e revogação de acessos</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Conscientização</div>
+        <div class="step-detail">Trilhas de aprendizado, LGPD e segurança da informação</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Plano de contingência</div>
+        <div class="step-detail">Resposta a incidentes, mitigação e continuidade do negócio</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector c2">
+    <div class="conn-line" style="--from: var(--do); --to: var(--check);"></div>
+    <div class="conn-arrow" style="--to: var(--check);"></div>
+  </div>
+
+  <!-- CHECK -->
+  <div class="phase check">
+    <div class="phase-header">
+      <span class="phase-tag">03 · Check</span>
+      <div>
+        <div class="phase-title">Verificar</div>
+        <div class="phase-desc">Monitoramento dos processos, auditorias e validação das práticas adotadas.</div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-name">Monitoramento</div>
+        <div class="step-detail">Acompanhamento contínuo de processos e controles</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Auditorias</div>
+        <div class="step-detail">Revisões periódicas e validação de conformidade</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Indicadores</div>
+        <div class="step-detail">% adequação, pendências, colaboradores treinados</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector c3">
+    <div class="conn-line" style="--from: var(--check); --to: var(--act);"></div>
+    <div class="conn-arrow" style="--to: var(--act);"></div>
+  </div>
+
+  <!-- ACT -->
+  <div class="phase act">
+    <div class="phase-header">
+      <span class="phase-tag">04 · Act</span>
+      <div>
+        <div class="phase-title">Agir</div>
+        <div class="phase-desc">Ajustes, correções e melhorias contínuas com base nos resultados e riscos identificados.</div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-name">Melhoria contínua</div>
+        <div class="step-detail">Evoluções baseadas nos resultados das auditorias</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Ajustes de processos</div>
+        <div class="step-detail">Correções em políticas, normas e controles</div>
+      </div>
+      <div class="step">
+        <div class="step-name">Gestão de riscos</div>
+        <div class="step-detail">Identificação, avaliação e mitigação de riscos</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Cycle note -->
+<div class="cycle-wrap">
+  <div class="cycle-icon">↺</div>
+  <div class="cycle-text">
+    <h3>Ciclo contínuo — ACT reinicia o PLAN</h3>
+    <p>Ao concluir a fase ACT, os aprendizados e ajustes alimentam um novo ciclo PLAN,<br>garantindo evolução contínua da governança de dados.</p>
+  </div>
+</div>
+
+<!-- Dashboard callout -->
+<div class="dashboard-callout">
+  <div class="icon">📊</div>
+  <div>
+    <h3>Dashboard de Progresso</h3>
+    <p>Camada opcional de acompanhamento visual — checklists dinâmicos, barra de progresso e indicadores em tempo real para apoiar a tomada de decisão em cada etapa do ciclo.</p>
+  </div>
+</div>
+
+<div class="footer">data-trust · pdca framework · governança de dados · LGPD</div>
+
+</body>
+</html>
