@@ -7,7 +7,7 @@ Empresas estão negligenciando a necessidade de se adequar à LGPD, sem clareza 
 Não existem regras bem definidas sobre quem pode acessar quais dados, como esse acesso é concedido e controlado, gerando risco de vazamentos e uso indevido.
 
 3. Falta de cultura e conscientização
-Colaboradores não possuem conhecimento sobre segurança da informação e proteção de dados, e não há նախաձեռնativas estruturadas de treinamento ou educação interna.
+Colaboradores não possuem conhecimento sobre segurança da informação e proteção de dados, e não há estruturadas de treinamento ou educação interna.
 
 4. Inexistência de plano de contingência
 A empresa não possui um plano estruturado para responder a incidentes (ex: vazamento de dados, ataques, falhas), dificultando ações rápidas de mitigação e recuperação.

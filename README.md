@@ -94,7 +94,7 @@ PLAN → DO → CHECK → ACT → (reinicia)
     /front-end                ← interface de acompanhamento
     /dashboard                ← painéis e indicadores visuais
 
-/99-templates-e-checklists
+/99-templates-checklists
     /checklists               ← todos os checklists do framework
     /templates-documentos     ← modelos de políticas e normas
     /templates-operacionais   ← modelos de processos e rotinas
