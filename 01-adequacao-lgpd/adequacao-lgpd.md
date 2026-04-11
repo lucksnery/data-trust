@@ -199,6 +199,26 @@ Guardar dados indefinidamente é um risco. A LGPD exige que os dados sejam manti
 
 ---
 
+### 3.4 Controle sobre compartilhamento de dados com terceiros
+
+A empresa compartilha dados pessoais sempre que utiliza fornecedores, plataformas, parceiros ou prestadores de serviço que têm acesso a esses dados — mesmo que indiretamente. Pela LGPD, a empresa continua responsável pelo tratamento mesmo quando o dado está nas mãos de um terceiro (operador).
+
+**O que fazer:**
+
+- Mapear todos os terceiros que têm acesso a dados pessoais da empresa: plataformas de e-mail marketing, CRMs, ERPs, contabilidades, escritórios jurídicos, agências, provedores de nuvem, etc.
+- Para cada terceiro, registrar:
+  - Quais dados são compartilhados
+  - Qual a finalidade do compartilhamento
+  - Onde os dados ficam armazenados (país/região — atenção para transferências internacionais)
+  - Qual o prazo de retenção pelo terceiro
+- Incluir cláusulas de proteção de dados (DPA — Data Processing Agreement) em todos os contratos com fornecedores que tratam dados pessoais
+- Garantir que os terceiros possuam políticas de segurança compatíveis com os requisitos da LGPD
+- Revisar a lista de terceiros ao menos uma vez por ano ou sempre que houver mudança de fornecedor
+
+**Referência legal:** Art. 39º — o operador deve realizar o tratamento segundo as instruções fornecidas pelo controlador. Art. 42º — o operador responde solidariamente pelos danos causados quando descumprir as obrigações da LGPD.
+
+---
+
 ## 4. A empresa possui controles de acesso a sistemas e dados pessoais?
 
 Acesso irrestrito a dados pessoais é um dos principais vetores de risco — tanto para vazamentos acidentais quanto para ataques internos.
