@@ -1,0 +1,8 @@
+- Será um documento PRINCIPAL pra tudo em cada etapa (1 LGPD, 2 TARARA....)
+(Levantamento de requisitos e cenários e em seguida ação.)
+
+- Terão dois documentos PRINCIPAIS, um técnico em Markdown, de forma que a pessoa possa importar para o Notion, Obsidian, etc. E outro em DOCX de forma que a pessoa trabalhe com documento, imprima, faça o quw quiser. DEPOIS TU MELHORA ISSO. 
+
+- Esse projeto segue uma estrutura de forma que será um framework para ajudar as pessoas a implementarem isso dentro de suas empresas. Não pretendo vender isso, e não to nem ai se for um consultor que for usar isso, quero que consultores se lasquem. 
+
+- Quero uma página HTML interativa de checklist para adequação à LGPD, com barra de progresso fixa no topo que acompanha o scroll da página. Os itens do checklist devem estar organizados em seções (presença digital, DPO, mapeamento de dados, segurança da informação, contratos e documentação), cada item com uma pergunta de diagnóstico, a ação necessária e uma tag de classificação (obrigatório, recomendado ou opcional). Ao marcar os itens, a barra de progresso atualiza em tempo real mostrando percentual, total concluído e pendentes, com contador por seção. Ao atingir 100% de conclusão, deve disparar uma animação de confetes e fogos de artifício na tela. Por fim, deve ter um botão para exportar o progresso em JSON.

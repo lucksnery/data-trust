@@ -1,0 +1,299 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.progress-bar-container {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--color-background-primary);
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  padding: 12px 20px;
+}
+.progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.progress-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+.progress-pct { font-size: 13px; color: var(--color-text-secondary); }
+.progress-track { width: 100%; height: 6px; background: var(--color-background-tertiary); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; background: #1D9E75; border-radius: 99px; transition: width 0.4s ease; width: 0%; }
+.progress-stats { display: flex; gap: 16px; margin-top: 6px; }
+.stat { font-size: 11px; color: var(--color-text-secondary); }
+.stat span { font-weight: 500; color: var(--color-text-primary); }
+.content { padding: 20px; max-width: 760px; margin: 0 auto; }
+.section { margin-bottom: 28px; }
+.section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.section-icon { width: 28px; height: 28px; border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+.icon-blue { background: #E6F1FB; color: #185FA5; }
+.icon-teal { background: #E1F5EE; color: #0F6E56; }
+.icon-amber { background: #FAEEDA; color: #854F0B; }
+.icon-purple { background: #EEEDFE; color: #534AB7; }
+.icon-coral { background: #FAECE7; color: #993C1D; }
+.section-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+.section-progress { margin-left: auto; font-size: 11px; color: var(--color-text-secondary); background: var(--color-background-secondary); padding: 2px 8px; border-radius: 99px; }
+.checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 12px; border-radius: var(--border-radius-md); margin-bottom: 6px; border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); cursor: pointer; transition: background 0.15s; }
+.checklist-item:hover { background: var(--color-background-secondary); }
+.checklist-item.checked { background: #E1F5EE; border-color: #9FE1CB; }
+.check-box { width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid var(--color-border-secondary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; background: var(--color-background-primary); transition: all 0.15s; }
+.checklist-item.checked .check-box { background: #1D9E75; border-color: #1D9E75; }
+.check-icon { display: none; width: 10px; height: 7px; }
+.checklist-item.checked .check-icon { display: block; }
+.item-content { flex: 1; }
+.item-label { font-size: 13px; color: var(--color-text-primary); font-weight: 500; margin-bottom: 2px; }
+.item-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+.action-tag { font-size: 10px; padding: 2px 7px; border-radius: 99px; flex-shrink: 0; margin-top: 2px; font-weight: 500; }
+.tag-required { background: #FCEBEB; color: #A32D2D; }
+.tag-recommended { background: #FAEEDA; color: #854F0B; }
+.tag-optional { background: #E6F1FB; color: #185FA5; }
+.export-btn { display: flex; align-items: center; gap: 8px; background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); color: var(--color-text-primary); font-size: 13px; padding: 8px 16px; border-radius: var(--border-radius-md); cursor: pointer; margin-top: 20px; }
+.export-btn:hover { background: var(--color-background-secondary); }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<div class="progress-bar-container">
+  <div class="progress-header">
+    <span class="progress-title">Progresso geral — LGPD</span>
+    <span class="progress-pct" id="pct">0%</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="fill"></div>
+  </div>
+  <div class="progress-stats">
+    <div class="stat"><span id="done">0</span> concluídos</div>
+    <div class="stat"><span id="total">0</span> no total</div>
+    <div class="stat"><span id="pending">0</span> pendentes</div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section" data-section="site">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🌐</div>
+      <span class="section-title">Presença digital</span>
+      <span class="section-progress" id="prog-site">0/4</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">A empresa possui site?</div><div class="item-desc">Identifique todos os domínios ativos da empresa</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">O site possui banner de cookies?</div><div class="item-desc">Ação: implementar banner com gestão de consentimento (ex: CookieYes, Osano)</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Existe página de política de privacidade publicada?</div><div class="item-desc">Ação: criar e publicar política clara com base legal, finalidade e direitos do titular</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Formulários do site coletam dados com consentimento explícito?</div><div class="item-desc">Ação: adicionar checkbox de consentimento em todos os formulários com link para política</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+  </div>
+
+  <div class="section" data-section="dpo">
+    <div class="section-header">
+      <div class="section-icon icon-teal">👤</div>
+      <span class="section-title">DPO e responsabilidade</span>
+      <span class="section-progress" id="prog-dpo">0/3</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">A empresa possui DPO (Encarregado de Dados) nomeado?</div><div class="item-desc">Ação: nomear responsável interno ou contratar DPO as a Service e publicar contato</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">O contato do DPO está publicado no site?</div><div class="item-desc">Ação: incluir canal de contato visível na página de política de privacidade</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Existe canal para titulares exercerem seus direitos?</div><div class="item-desc">Ação: criar formulário ou e-mail dedicado para solicitações de acesso, correção e exclusão de dados</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+  </div>
+
+  <div class="section" data-section="dados">
+    <div class="section-header">
+      <div class="section-icon icon-amber">🗂</div>
+      <span class="section-title">Mapeamento de dados</span>
+      <span class="section-progress" id="prog-dados">0/4</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">A empresa sabe quais dados pessoais coleta e onde estão armazenados?</div><div class="item-desc">Ação: criar inventário de dados (data mapping) por sistema, departamento e finalidade</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Existe definição clara da base legal para cada tratamento de dados?</div><div class="item-desc">Ação: mapear e documentar a base legal por categoria de dado</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Os dados são compartilhados com terceiros ou fornecedores?</div><div class="item-desc">Ação: identificar todos os operadores e incluir cláusulas de proteção de dados nos contratos</div></div>
+      <span class="action-tag tag-recommended">recomendado</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Existe política de retenção e descarte de dados?</div><div class="item-desc">Ação: definir prazos de guarda por categoria de dado e processo de descarte seguro</div></div>
+      <span class="action-tag tag-recommended">recomendado</span>
+    </div>
+  </div>
+
+  <div class="section" data-section="seguranca">
+    <div class="section-header">
+      <div class="section-icon icon-purple">🔒</div>
+      <span class="section-title">Segurança da informação</span>
+      <span class="section-progress" id="prog-seguranca">0/3</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">O acesso a sistemas com dados pessoais é controlado e registrado?</div><div class="item-desc">Ação: implementar controle de acesso por perfil (least privilege) e log de acessos</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Existe plano de resposta a incidentes de segurança?</div><div class="item-desc">Ação: criar playbook de resposta a vazamentos com prazo de notificação à ANPD (até 72h)</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Os colaboradores foram treinados sobre LGPD e segurança?</div><div class="item-desc">Ação: criar trilha de conscientização com treinamento mínimo anual e registro de participação</div></div>
+      <span class="action-tag tag-recommended">recomendado</span>
+    </div>
+  </div>
+
+  <div class="section" data-section="contratos">
+    <div class="section-header">
+      <div class="section-icon icon-coral">📄</div>
+      <span class="section-title">Contratos e documentação</span>
+      <span class="section-progress" id="prog-contratos">0/3</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Os contratos com clientes e fornecedores têm cláusulas de proteção de dados?</div><div class="item-desc">Ação: revisar e atualizar contratos existentes, incluir DPA (Data Processing Agreement)</div></div>
+      <span class="action-tag tag-required">obrigatório</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">Existe Registro de Atividades de Tratamento (ROPA) documentado?</div><div class="item-desc">Ação: criar e manter o ROPA atualizado — obrigatório para empresas com tratamento em larga escala</div></div>
+      <span class="action-tag tag-recommended">recomendado</span>
+    </div>
+    <div class="checklist-item" onclick="toggle(this)">
+      <div class="check-box"><svg class="check-icon" viewBox="0 0 10 7" fill="none"><path d="M1 3.5L3.5 6L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="item-content"><div class="item-label">A empresa realiza RIPD para tratamentos de alto risco?</div><div class="item-desc">Ação: identificar tratamentos de alto risco e conduzir RIPD antes de iniciar o processamento</div></div>
+      <span class="action-tag tag-optional">opcional</span>
+    </div>
+  </div>
+
+  <button class="export-btn" onclick="exportJSON()">↓ Exportar progresso (JSON)</button>
+</div>
+
+<script>
+let celebrated = false;
+
+function fireWorks() {
+  const duration = 4000;
+  const end = Date.now() + duration;
+  const colors = ['#1D9E75', '#534AB7', '#D85A30', '#378ADD', '#BA7517'];
+
+  (function frame() {
+    confetti({
+      particleCount: 3,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: colors
+    });
+    confetti({
+      particleCount: 3,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: colors
+    });
+    if (Date.now() < end) requestAnimationFrame(frame);
+  })();
+
+  setTimeout(() => {
+    confetti({
+      particleCount: 120,
+      spread: 100,
+      origin: { y: 0.5 },
+      colors: colors,
+      startVelocity: 45,
+      scalar: 1.2
+    });
+  }, 600);
+
+  setTimeout(() => {
+    confetti({
+      particleCount: 80,
+      spread: 120,
+      origin: { x: 0.3, y: 0.4 },
+      colors: colors,
+      startVelocity: 50
+    });
+    confetti({
+      particleCount: 80,
+      spread: 120,
+      origin: { x: 0.7, y: 0.4 },
+      colors: colors,
+      startVelocity: 50
+    });
+  }, 1500);
+}
+
+function updateAll() {
+  const all = document.querySelectorAll('.checklist-item');
+  const done = document.querySelectorAll('.checklist-item.checked');
+  const t = all.length, d = done.length;
+  const pct = Math.round((d / t) * 100);
+
+  document.getElementById('fill').style.width = pct + '%';
+  document.getElementById('pct').textContent = pct + '%';
+  document.getElementById('done').textContent = d;
+  document.getElementById('total').textContent = t;
+  document.getElementById('pending').textContent = t - d;
+
+  ['site','dpo','dados','seguranca','contratos'].forEach(sec => {
+    const section = document.querySelector('[data-section="' + sec + '"]');
+    if (!section) return;
+    const items = section.querySelectorAll('.checklist-item');
+    const checked = section.querySelectorAll('.checklist-item.checked');
+    const el = document.getElementById('prog-' + sec);
+    if (el) el.textContent = checked.length + '/' + items.length;
+  });
+
+  if (pct === 100 && !celebrated) {
+    celebrated = true;
+    setTimeout(fireWorks, 300);
+  }
+  if (pct < 100) celebrated = false;
+}
+
+function toggle(el) {
+  el.classList.toggle('checked');
+  updateAll();
+}
+
+function exportJSON() {
+  const items = document.querySelectorAll('.checklist-item');
+  const data = { exportedAt: new Date().toISOString(), items: [] };
+  items.forEach((item, i) => {
+    data.items.push({
+      id: i,
+      label: item.querySelector('.item-label').textContent,
+      checked: item.classList.contains('checked')
+    });
+  });
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'progresso-lgpd.json';
+  a.click();
+}
+
+updateAll();
+</script>
