@@ -1,1 +1,79 @@
-ijsdiojfsdiojfiosdjfiosdjfsdjfio
+📂 1. Adequação LGPD
+📖 Explicação detalhada
+
+A fase de adequação à LGPD tem como objetivo garantir que a empresa esteja em conformidade com a legislação no tratamento de dados pessoais.
+
+Isso envolve identificar quais dados são coletados, para qual finalidade, onde são armazenados, quem tem acesso e por quanto tempo são mantidos.
+
+Também inclui a definição de bases legais para tratamento, criação de políticas de privacidade, termos de uso e processos para atender os direitos dos titulares (como acesso, correção e exclusão de dados).
+
+Além disso, é necessário garantir transparência, segurança e governança sobre todo o ciclo de vida dos dados.
+
+❓ Questionário (Diagnóstico)
+A empresa sabe quais dados pessoais coleta?
+Existe um mapeamento de dados (inventário) atualizado?
+Está definida a finalidade de uso dos dados?
+Existe uma base legal definida para cada tipo de dado tratado?
+A empresa possui uma política de privacidade formalizada?
+Os usuários conseguem solicitar acesso ou exclusão de seus dados?
+Existe um responsável (DPO/Encarregado) definido?
+Os dados são armazenados por um tempo determinado e controlado?
+Há controle sobre compartilhamento de dados com terceiros?
+
+📂 2. Controle de Acessos
+📖 Explicação detalhada
+
+O controle de acessos garante que apenas pessoas autorizadas possam acessar dados sensíveis, reduzindo riscos de vazamento e uso indevido.
+
+Essa fase envolve a definição de perfis de acesso, autenticação segura (como MFA), controle de permissões, além de processos de concessão e revogação de acessos.
+
+Também é essencial manter registros (logs) de acesso e revisar periodicamente quem tem permissão para acessar determinados dados.
+
+❓ Questionário (Diagnóstico)
+Existe um controle de quem acessa quais dados?
+Os acessos são definidos por perfil ou função?
+Há uso de autenticação multifator (MFA)?
+Existe processo para criação e remoção de acessos?
+Os acessos são revisados periodicamente?
+Há registro (logs) de quem acessou o quê e quando?
+Usuários têm acesso somente ao necessário (princípio do menor privilégio)?
+Existe controle para acessos de ex-colaboradores?
+
+📂 3. Cultura e Conscientização
+📖 Explicação detalhada
+
+A segurança da informação não depende apenas de tecnologia, mas principalmente de pessoas.
+
+Essa fase busca criar uma cultura organizacional voltada à proteção de dados, garantindo que todos os colaboradores entendam seus papéis e responsabilidades.
+
+Inclui treinamentos, campanhas internas, boas práticas e prevenção contra ameaças como phishing e engenharia social.
+
+❓ Questionário (Diagnóstico)
+A empresa realiza treinamentos de LGPD e segurança?
+Os colaboradores sabem como lidar com dados pessoais?
+Existe uma política de segurança da informação acessível?
+São feitas campanhas de conscientização periódicas?
+Os colaboradores sabem identificar tentativas de phishing?
+Existe um canal para reportar incidentes ou suspeitas?
+Novos colaboradores recebem treinamento ao entrar?
+
+📂 4. Gestão de Riscos
+📖 Explicação detalhada
+
+A gestão de riscos envolve identificar, analisar e tratar ameaças que possam comprometer a segurança e privacidade dos dados.
+
+Isso inclui riscos técnicos, operacionais e humanos.
+
+A empresa deve implementar medidas preventivas, além de possuir um plano estruturado para responder rapidamente a incidentes de segurança.
+
+Essa fase também envolve monitoramento contínuo e melhoria dos controles existentes.
+
+❓ Questionário (Diagnóstico)
+A empresa realiza análise de riscos regularmente?
+Existe um documento formal de gestão de riscos?
+Os riscos são classificados por nível (baixo, médio, alto)?
+Existe um plano de resposta a incidentes?
+A empresa sabe como agir em caso de vazamento de dados?
+São realizados testes ou simulações de incidentes?
+Existe monitoramento de ameaças e vulnerabilidades?
+Há plano de continuidade de negócios?
