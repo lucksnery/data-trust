@@ -1,0 +1,127 @@
+📋 Adequação à LGPD — Checklist Estruturado
+
+Instrução:
+Marque:
+
+✅ Sim
+⚠️ Parcial
+❌ Não
+🌐 1. Presença Digital e Site
+1.1 Estrutura geral
+A empresa possui site, sistema ou plataforma que coleta dados pessoais?
+Existe controle sobre quais dados são coletados nesses ambientes?
+
+1.2 Cookies e consentimento
+Existe banner de cookies visível na primeira visita?
+O usuário pode aceitar, recusar ou personalizar cookies?
+Cookies não essenciais só são ativados após consentimento?
+O consentimento é registrado (data, hora e versão)?
+
+1.3 Política de privacidade
+Existe página de política de privacidade acessível?
+A política informa quais dados são coletados?
+Explica a finalidade do uso dos dados?
+Informa a base legal de tratamento?
+Informa com quem os dados são compartilhados?
+Define tempo de retenção dos dados?
+Possui linguagem clara e acessível?
+
+1.4 Formulários e coleta de dados
+Os formulários possuem checkbox de consentimento?
+O checkbox não vem pré-marcado?
+Existe link para política de privacidade nos formulários?
+O consentimento é registrado com data e hora?
+São coletados apenas dados necessários?
+
+1.5 Direitos do titular
+Existe canal para solicitação de dados?
+O usuário pode solicitar acesso aos dados?
+O usuário pode solicitar exclusão ou correção?
+Existe prazo definido para resposta?
+As solicitações são registradas e controladas?
+
+👤 2. DPO (Encarregado de Dados)
+2.1 Nomeação
+A empresa possui DPO nomeado?
+Existe documento formal de nomeação?
+O DPO pode ser interno ou externo?
+
+2.2 Publicação e contato
+O contato do DPO está disponível no site?
+O canal de comunicação é acessível aos usuários?
+
+2.3 Atuação
+O DPO responde solicitações de titulares?
+Atua na orientação interna sobre LGPD?
+Interage com a ANPD quando necessário?
+Acompanha atualizações da legislação?
+
+🗂️ 3. Mapeamento de Dados
+3.1 Inventário de dados
+Existe mapeamento de todos os dados coletados?
+A empresa sabe onde os dados estão armazenados?
+Está documentado quem tem acesso aos dados?
+Existe registro de finalidade para cada dado?
+
+3.2 Base legal
+Cada tratamento possui base legal definida?
+A empresa evita uso indevido de consentimento?
+As bases legais são revisadas periodicamente?
+
+3.3 Retenção e descarte
+Existem prazos definidos de retenção de dados?
+Existe política formal de retenção?
+Há rotina de exclusão ou anonimização?
+O descarte é feito de forma segura?
+
+3.4 Compartilhamento com terceiros
+A empresa sabe com quem compartilha dados?
+Existe registro dos terceiros envolvidos?
+Existem contratos com cláusulas de proteção de dados (DPA)?
+Os terceiros possuem nível adequado de segurança?
+Há controle sobre transferência internacional de dados?
+
+🔐 4. Controles de Segurança (LGPD)
+4.1 Controle de acesso
+Existe controle sobre quem acessa os dados?
+Os acessos são limitados por função?
+Existe registro de acessos (logs)?
+
+4.2 Segurança de credenciais
+Existem políticas de senha definidas?
+Há uso de autenticação multifator (MFA)?
+É proibido compartilhamento de credenciais?
+
+🚨 5. Resposta a Incidentes
+5.1 Estrutura de resposta
+Existe plano de resposta a incidentes?
+A empresa sabe identificar um incidente de dados?
+Existe fluxo de resposta definido?
+
+5.2 Comunicação
+Existe processo para notificar o DPO?
+A empresa sabe quando notificar a ANPD?
+Existe processo para comunicar titulares afetados?
+
+5.3 Monitoramento
+Os incidentes são registrados?
+Existe análise pós-incidente?
+O plano é testado periodicamente?
+
+🎓 6. Treinamento e Conscientização
+Os colaboradores recebem treinamento sobre LGPD?
+Existe registro de participação?
+Há reciclagem periódica?
+Os contratos incluem cláusulas de confidencialidade?
+
+📊 Score Final — Adequação LGPD
+
+Some os pontos:
+
+✅ = 2 pontos
+⚠️ = 1 ponto
+❌ = 0 pontos
+Classificação:
+0–40% → 🔴 Alto risco (não conforme)
+41–70% → 🟡 Médio risco (parcialmente conforme)
+71–100% → 🟢 Baixo risco (conforme)
