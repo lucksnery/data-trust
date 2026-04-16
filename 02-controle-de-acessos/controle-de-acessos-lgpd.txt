@@ -1,195 +1,219 @@
-Controle de Acessos — Guia de Diagnóstico e Ação (LGPD)
+Controle de Acessos — Guia de Diagnóstico e Ação
 
-Este documento orienta o executor do projeto na avaliação e implementação de controles de acesso a sistemas e dados pessoais dentro da empresa, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).
+Este documento orienta o executor do projeto na identificação, estruturação e controle de acessos a dados pessoais dentro da empresa, conforme os princípios da LGPD (Lei nº 13.709/2018). O objetivo é garantir que apenas pessoas autorizadas tenham acesso aos dados, reduzindo riscos de vazamentos, acessos indevidos e incidentes de segurança.
 
-A abordagem segue uma lógica sequencial: cada etapa começa com uma pergunta de diagnóstico e direciona para ações práticas. O objetivo é garantir que apenas pessoas autorizadas tenham acesso aos dados certos, no momento certo, reduzindo riscos de vazamentos, acessos indevidos e incidentes de segurança.
+A abordagem segue o modelo sequencial: cada etapa inicia com um diagnóstico e direciona para ações práticas de adequação.
 
-1. A empresa possui controle de acesso formal aos sistemas?
+1. A empresa controla quem tem acesso aos dados pessoais?
 
-Controle de acesso não é apenas login e senha — envolve políticas, processos e rastreabilidade.
+O primeiro passo é entender se existe qualquer tipo de controle sobre quem pode acessar dados — seja em sistemas, arquivos, planilhas ou documentos físicos.
 
-Se possui controles formalizados: seguir para a etapa 2
-Se não possui ou é informal: seguir os itens 1.1 a 1.3
+Se não existe controle formal: seguir para 1.1 a 1.3.
+Se existe, mas é informal ou não documentado: revisar os itens abaixo.
+Se existe controle estruturado: avançar para a etapa 2.
 
-1.1 Implementação de controle de acesso por identidade (IAM)
+1.1 Mapeamento de acessos a dados pessoais
 
-O que fazer:
-
-Adotar um modelo de gestão de identidade e acesso (IAM — Identity and Access Management)
-Garantir que cada usuário possua um acesso individual (proibido uso de contas genéricas)
-Centralizar acessos, sempre que possível (ex: Active Directory, Azure AD, Google Workspace)
-Associar cada usuário a um identificador único
-Integrar acessos entre sistemas quando aplicável (SSO — Single Sign-On)
-1.2 Política de controle de acesso
+Não é possível proteger o que não se conhece. Antes de controlar acessos, é necessário mapear quem acessa o quê.
 
 O que fazer:
 
-Criar uma política formal de controle de acesso contendo:
-Regras de concessão de acesso
-Critérios de aprovação
-Responsáveis pela autorização
-Processo de revisão periódica
-Definir níveis de acesso (básico, intermediário, administrativo)
-Formalizar a política e garantir que seja conhecida pelos colaboradores
-1.3 Registro e rastreabilidade de acessos
+Identificar todos os sistemas, pastas, bancos de dados e arquivos que contenham dados pessoais
+Listar todos os usuários com acesso a esses dados (colaboradores, terceiros, fornecedores)
+Documentar:
+Qual usuário acessa quais dados
+Qual o nível de acesso (leitura, edição, exclusão)
+Qual a justificativa do acesso (função exercida)
+Consolidar essas informações em uma matriz de controle de acessos (Access Matrix)
+1.2 Definição de perfis de acesso (RBAC)
+
+Nem todo colaborador precisa acessar todos os dados. A LGPD exige limitação de acesso conforme necessidade.
 
 O que fazer:
 
-Implementar logs de acesso em sistemas críticos:
-Quem acessou
-Quando acessou
-O que foi acessado/modificado
-Garantir que logs não possam ser alterados facilmente
-Definir tempo de retenção dos logs (ex: 6 meses a 2 anos)
-Monitorar acessos suspeitos ou fora do padrão
+Criar perfis de acesso baseados em funções (ex: financeiro, RH, marketing, TI)
+Vincular cada perfil a permissões específicas
+Evitar acessos genéricos ou compartilhados
+Garantir que novos usuários sejam vinculados a perfis — nunca a permissões individuais diretas
 
-Referência legal: Art. 6º, VII — princípio da segurança
+Referência legal:
+Art. 6º, III — Princípio da necessidade: limitar o tratamento ao mínimo necessário.
 
-2. Os acessos são definidos por perfil de função (RBAC)?
+1.3 Aplicação do princípio do menor privilégio
 
-Nem todo colaborador precisa ver tudo. Acesso deve ser baseado na função.
-
-Se sim: seguir para etapa 3
-Se não: seguir os itens 2.1 e 2.2
-
-2.1 Implementação de RBAC (Role-Based Access Control)
+O acesso deve ser restrito ao mínimo necessário para execução da função.
 
 O que fazer:
 
-Definir perfis de acesso por função:
-Ex: financeiro, RH, marketing, TI
-Vincular permissões a funções, não a pessoas diretamente
+Revisar acessos existentes e remover permissões excessivas
 Garantir que:
-Um analista acessa apenas o necessário
-Um gestor acessa dados agregados
-Evitar acessos administrativos desnecessários
-2.2 Princípio do menor privilégio
+Um colaborador não acesse dados de outro departamento sem necessidade
+Dados sensíveis (ex: saúde, biometria) tenham acesso ainda mais restrito
+Implementar política formal de “least privilege”
+2. A empresa possui autenticação segura nos sistemas?
+
+Ter controle de acesso não é suficiente se a autenticação for fraca.
+
+Se não há políticas de autenticação: seguir 2.1 a 2.3.
+Se há, mas são básicas: revisar e fortalecer.
+Se são robustas: avançar para etapa 3.
+
+2.1 Política de senhas
+
+Senhas fracas são uma das principais causas de incidentes.
 
 O que fazer:
 
-Aplicar o conceito de least privilege (mínimo acesso necessário)
-Revisar acessos existentes e remover excessos
-Garantir que novos acessos sejam concedidos com base em necessidade real
-Evitar acessos permanentes elevados (usar acesso temporário quando necessário)
-
-Referência legal: Art. 6º, III — princípio da necessidade
-
-3. Existe um processo formal de concessão, revisão e revogação de acessos?
-
-A maior falha em segurança não é conceder acesso — é esquecer de remover.
-
-Se sim: seguir para etapa 4
-Se não: seguir os itens 3.1 a 3.3
-
-3.1 Concessão de acessos
-
-O que fazer:
-
-Criar fluxo formal de solicitação:
-Pedido documentado
-Aprovação do gestor
-Registro do acesso concedido
-Evitar concessões informais (ex: “libera lá rapidinho”)
-Manter histórico de quem autorizou o acesso
-3.2 Revisão periódica de acessos
-
-O que fazer:
-
-Realizar revisões periódicas (ex: a cada 3 ou 6 meses)
-Validar se os usuários ainda precisam dos acessos atuais
-Ajustar ou remover acessos desnecessários
-Registrar as revisões realizadas
-3.3 Revogação de acessos (offboarding)
-
-O que fazer:
-
-Criar processo imediato para desligamentos:
-Revogar acessos no mesmo dia
-Bloquear contas
-Revisar acessos em mudanças de função interna
-Garantir que não existam contas “órfãs” ativas
-4. A empresa possui política de autenticação segura?
-
-Senha fraca é porta aberta para incidente.
-
-Se sim: seguir para etapa 5
-Se não: seguir os itens 4.1 a 4.3
-
-4.1 Política de senhas
-
-O que fazer:
-
-Exigir:
-Senhas fortes (mínimo 8–12 caracteres)
+Exigir senhas com:
+Mínimo de caracteres (recomendado: 8 ou mais)
 Combinação de letras, números e símbolos
-Proibir:
-Senhas óbvias (123456, empresa123)
-Reutilização de senhas
-Implementar:
-Expiração periódica (quando aplicável)
-Bloqueio após tentativas incorretas
-4.2 Autenticação multifator (MFA / 2FA)
+Proibir reutilização de senhas antigas
+Bloquear acesso após tentativas inválidas consecutivas
+Proibir compartilhamento de credenciais
+2.2 Implementação de autenticação multifator (2FA)
+
+Apenas senha não é suficiente para sistemas críticos.
 
 O que fazer:
 
-Implementar 2FA em:
+Ativar 2FA em:
+Sistemas com dados pessoais
 E-mails corporativos
-Sistemas críticos
 Acessos administrativos
-Utilizar:
-Apps autenticadores (Google Authenticator, Microsoft Authenticator)
-Tokens ou biometria quando possível
-4.3 Gestão de credenciais
+Priorizar aplicativos autenticadores (Google Authenticator, Microsoft Authenticator) ou tokens
+
+Referência legal:
+Art. 46º — adoção de medidas de segurança técnicas e administrativas.
+
+2.3 Gestão de credenciais
+
+O ciclo de vida das credenciais precisa ser controlado.
 
 O que fazer:
 
-Proibir compartilhamento de login e senha
-Utilizar gerenciadores de senha corporativos (quando necessário)
-Evitar armazenamento de senhas em:
-Planilhas
-Papéis
-Bloco de notas
-5. Existem controles de acesso físico aos ambientes com dados?
+Criar processo para:
+Criação de acessos (onboarding)
+Alteração de permissões
+Revogação imediata em desligamentos (offboarding)
+Garantir que acessos de ex-colaboradores sejam removidos no mesmo dia
+3. A empresa monitora os acessos realizados?
 
-Segurança não é só digital.
+Sem monitoramento, não há visibilidade sobre possíveis abusos ou incidentes.
 
-Se sim: seguir para etapa 6
-Se não: seguir os itens 5.1 e 5.2
+Se não há monitoramento: seguir 3.1 e 3.2.
+Se há: validar qualidade e cobertura.
 
-5.1 Controle de acesso físico
+3.1 Registro de logs de acesso
 
-O que fazer:
-
-Restringir acesso a áreas sensíveis:
-Servidores
-Arquivos físicos
-Utilizar:
-Crachás
-Biometria
-Controle de entrada/saída
-Registrar acessos físicos
-5.2 Proteção de documentos físicos
+Toda ação relevante deve ser registrada.
 
 O que fazer:
 
-Armazenar documentos com dados pessoais em locais seguros
-Controlar quem pode acessar arquivos físicos
-Evitar documentos expostos em mesas (clean desk policy)
-6. A empresa monitora e responde a acessos indevidos?
+Ativar logs em sistemas que tratam dados pessoais
+Registrar:
+Usuário
+Data e hora
+Ação realizada (visualização, alteração, exclusão)
+Garantir que os logs sejam protegidos contra alteração
+3.2 Monitoramento e auditoria de acessos
 
-Controle sem monitoramento não funciona.
-
-Se sim: encerrar diagnóstico
-Se não: seguir item 6.1
-
-6.1 Monitoramento e resposta a acessos suspeitos
+Registrar não basta — é preciso analisar.
 
 O que fazer:
 
-Implementar alertas para:
-Acessos fora de horário
-Localizações incomuns
-Tentativas de login excessivas
-Integrar com plano de resposta a incidentes
-Investigar acessos suspeitos rapidamente
-Registrar e documentar ocorrências
+Criar rotina de auditoria periódica dos logs
+Identificar:
+Acessos fora do horário padrão
+Tentativas de acesso não autorizadas
+Volume incomum de consultas ou downloads
+Definir responsáveis pela análise (TI, segurança ou DPO)
+4. A empresa revisa os acessos periodicamente?
+
+Acessos acumulam com o tempo — especialmente em empresas em crescimento.
+
+Se não há revisão periódica: seguir 4.1.
+Se há: validar frequência e formalização.
+
+4.1 Revisão periódica de acessos
+
+O que fazer:
+
+Realizar revisão de acessos ao menos a cada 6 meses
+Validar com gestores:
+Se o colaborador ainda precisa daquele acesso
+Se o nível de permissão está adequado
+Revogar acessos desnecessários imediatamente
+Documentar todas as revisões realizadas
+5. A empresa controla acessos de terceiros?
+
+Fornecedores também podem ser um vetor de risco.
+
+Se terceiros têm acesso a dados: seguir 5.1 e 5.2.
+Se não têm: validar periodicamente.
+
+5.1 Controle de acesso para terceiros
+
+O que fazer:
+
+Conceder acesso apenas quando necessário
+Criar usuários individuais — nunca compartilhados
+Definir prazo de validade para acessos temporários
+Monitorar atividades realizadas por terceiros
+5.2 Cláusulas contratuais de acesso
+
+O que fazer:
+
+Incluir cláusulas de:
+Confidencialidade
+Segurança da informação
+Responsabilidade sobre uso indevido
+Garantir que terceiros sigam padrões compatíveis com a LGPD
+
+Referência legal:
+Art. 39º — o operador deve seguir as instruções do controlador.
+
+6. Existe política formal de controle de acessos?
+
+Sem formalização, o processo não é sustentável.
+
+Se não existe política: seguir 6.1.
+Se existe: revisar e atualizar.
+
+6.1 Criação da política de controle de acessos
+
+O que fazer:
+
+Documentar política contendo:
+Regras de concessão de acesso
+Critérios de autenticação
+Uso de senhas e 2FA
+Monitoramento e auditoria
+Penalidades em caso de violação
+Comunicar a política a todos os colaboradores
+Integrar a política ao programa de segurança da informação
+7. Os colaboradores estão conscientes sobre controle de acessos?
+
+Tecnologia sem conscientização não funciona.
+
+Se não há treinamento: seguir 7.1.
+Se há: revisar periodicidade.
+
+7.1 Treinamento sobre acesso e segurança
+
+O que fazer:
+
+Treinar colaboradores sobre:
+Uso correto de credenciais
+Riscos de compartilhamento de acessos
+Engenharia social (phishing, pretexting)
+Simular ataques para validação (ex: phishing interno)
+Registrar participação e evidências
+
+Referências legais gerais:
+
+Art. 6º, III — Princípio da necessidade
+Art. 46º — Segurança da informação
+Art. 48º — Comunicação de incidentes
+Art. 39º — Responsabilidade do operador
+
+Documento gerado como parte do framework data-trust — fase PLAN / controle de acessos.
