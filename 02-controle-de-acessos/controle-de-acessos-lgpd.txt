@@ -1,0 +1,195 @@
+Controle de Acessos — Guia de Diagnóstico e Ação (LGPD)
+
+Este documento orienta o executor do projeto na avaliação e implementação de controles de acesso a sistemas e dados pessoais dentro da empresa, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).
+
+A abordagem segue uma lógica sequencial: cada etapa começa com uma pergunta de diagnóstico e direciona para ações práticas. O objetivo é garantir que apenas pessoas autorizadas tenham acesso aos dados certos, no momento certo, reduzindo riscos de vazamentos, acessos indevidos e incidentes de segurança.
+
+1. A empresa possui controle de acesso formal aos sistemas?
+
+Controle de acesso não é apenas login e senha — envolve políticas, processos e rastreabilidade.
+
+Se possui controles formalizados: seguir para a etapa 2
+Se não possui ou é informal: seguir os itens 1.1 a 1.3
+
+1.1 Implementação de controle de acesso por identidade (IAM)
+
+O que fazer:
+
+Adotar um modelo de gestão de identidade e acesso (IAM — Identity and Access Management)
+Garantir que cada usuário possua um acesso individual (proibido uso de contas genéricas)
+Centralizar acessos, sempre que possível (ex: Active Directory, Azure AD, Google Workspace)
+Associar cada usuário a um identificador único
+Integrar acessos entre sistemas quando aplicável (SSO — Single Sign-On)
+1.2 Política de controle de acesso
+
+O que fazer:
+
+Criar uma política formal de controle de acesso contendo:
+Regras de concessão de acesso
+Critérios de aprovação
+Responsáveis pela autorização
+Processo de revisão periódica
+Definir níveis de acesso (básico, intermediário, administrativo)
+Formalizar a política e garantir que seja conhecida pelos colaboradores
+1.3 Registro e rastreabilidade de acessos
+
+O que fazer:
+
+Implementar logs de acesso em sistemas críticos:
+Quem acessou
+Quando acessou
+O que foi acessado/modificado
+Garantir que logs não possam ser alterados facilmente
+Definir tempo de retenção dos logs (ex: 6 meses a 2 anos)
+Monitorar acessos suspeitos ou fora do padrão
+
+Referência legal: Art. 6º, VII — princípio da segurança
+
+2. Os acessos são definidos por perfil de função (RBAC)?
+
+Nem todo colaborador precisa ver tudo. Acesso deve ser baseado na função.
+
+Se sim: seguir para etapa 3
+Se não: seguir os itens 2.1 e 2.2
+
+2.1 Implementação de RBAC (Role-Based Access Control)
+
+O que fazer:
+
+Definir perfis de acesso por função:
+Ex: financeiro, RH, marketing, TI
+Vincular permissões a funções, não a pessoas diretamente
+Garantir que:
+Um analista acessa apenas o necessário
+Um gestor acessa dados agregados
+Evitar acessos administrativos desnecessários
+2.2 Princípio do menor privilégio
+
+O que fazer:
+
+Aplicar o conceito de least privilege (mínimo acesso necessário)
+Revisar acessos existentes e remover excessos
+Garantir que novos acessos sejam concedidos com base em necessidade real
+Evitar acessos permanentes elevados (usar acesso temporário quando necessário)
+
+Referência legal: Art. 6º, III — princípio da necessidade
+
+3. Existe um processo formal de concessão, revisão e revogação de acessos?
+
+A maior falha em segurança não é conceder acesso — é esquecer de remover.
+
+Se sim: seguir para etapa 4
+Se não: seguir os itens 3.1 a 3.3
+
+3.1 Concessão de acessos
+
+O que fazer:
+
+Criar fluxo formal de solicitação:
+Pedido documentado
+Aprovação do gestor
+Registro do acesso concedido
+Evitar concessões informais (ex: “libera lá rapidinho”)
+Manter histórico de quem autorizou o acesso
+3.2 Revisão periódica de acessos
+
+O que fazer:
+
+Realizar revisões periódicas (ex: a cada 3 ou 6 meses)
+Validar se os usuários ainda precisam dos acessos atuais
+Ajustar ou remover acessos desnecessários
+Registrar as revisões realizadas
+3.3 Revogação de acessos (offboarding)
+
+O que fazer:
+
+Criar processo imediato para desligamentos:
+Revogar acessos no mesmo dia
+Bloquear contas
+Revisar acessos em mudanças de função interna
+Garantir que não existam contas “órfãs” ativas
+4. A empresa possui política de autenticação segura?
+
+Senha fraca é porta aberta para incidente.
+
+Se sim: seguir para etapa 5
+Se não: seguir os itens 4.1 a 4.3
+
+4.1 Política de senhas
+
+O que fazer:
+
+Exigir:
+Senhas fortes (mínimo 8–12 caracteres)
+Combinação de letras, números e símbolos
+Proibir:
+Senhas óbvias (123456, empresa123)
+Reutilização de senhas
+Implementar:
+Expiração periódica (quando aplicável)
+Bloqueio após tentativas incorretas
+4.2 Autenticação multifator (MFA / 2FA)
+
+O que fazer:
+
+Implementar 2FA em:
+E-mails corporativos
+Sistemas críticos
+Acessos administrativos
+Utilizar:
+Apps autenticadores (Google Authenticator, Microsoft Authenticator)
+Tokens ou biometria quando possível
+4.3 Gestão de credenciais
+
+O que fazer:
+
+Proibir compartilhamento de login e senha
+Utilizar gerenciadores de senha corporativos (quando necessário)
+Evitar armazenamento de senhas em:
+Planilhas
+Papéis
+Bloco de notas
+5. Existem controles de acesso físico aos ambientes com dados?
+
+Segurança não é só digital.
+
+Se sim: seguir para etapa 6
+Se não: seguir os itens 5.1 e 5.2
+
+5.1 Controle de acesso físico
+
+O que fazer:
+
+Restringir acesso a áreas sensíveis:
+Servidores
+Arquivos físicos
+Utilizar:
+Crachás
+Biometria
+Controle de entrada/saída
+Registrar acessos físicos
+5.2 Proteção de documentos físicos
+
+O que fazer:
+
+Armazenar documentos com dados pessoais em locais seguros
+Controlar quem pode acessar arquivos físicos
+Evitar documentos expostos em mesas (clean desk policy)
+6. A empresa monitora e responde a acessos indevidos?
+
+Controle sem monitoramento não funciona.
+
+Se sim: encerrar diagnóstico
+Se não: seguir item 6.1
+
+6.1 Monitoramento e resposta a acessos suspeitos
+
+O que fazer:
+
+Implementar alertas para:
+Acessos fora de horário
+Localizações incomuns
+Tentativas de login excessivas
+Integrar com plano de resposta a incidentes
+Investigar acessos suspeitos rapidamente
+Registrar e documentar ocorrências
