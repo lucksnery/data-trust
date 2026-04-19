@@ -1,6 +1,6 @@
 # Adequação à LGPD — Guia de Diagnóstico e Ação
 
-Este documento orienta o executor do projeto na identificação do cenário atual da empresa em relação à Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018). A abordagem é sequencial: cada etapa começa com uma pergunta de diagnóstico e, a partir da resposta, direciona para as ações necessárias ou para o próximo ponto. O objetivo não é apenas mapear lacunas, mas entregar um caminho claro do que precisa ser feito para alcançar a conformidade.
+Este documento orienta o executor do projeto na identificação do cenário atual da empresa em relação à [Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) e da [ANPD (Autoridade Nacional de Proteção de Dados)](https://www.gov.br/cidadania/pt-br/acesso-a-informacao/institucional/anpd). A abordagem é sequencial: cada etapa começa com uma pergunta de diagnóstico e, a partir da resposta, direciona para as ações necessárias ou para o próximo ponto. O objetivo não é apenas mapear lacunas, mas entregar um caminho claro do que precisa ser feito para alcançar a conformidade.
 
 ---
 
@@ -15,7 +15,7 @@ Considere qualquer domínio ativo onde a empresa coleta, recebe ou exibe dados d
 
 ### 1.1 Banner de gerenciamento de cookies
 
-O site coleta cookies de terceiros, analytics, publicidade ou rastreamento? Pela LGPD, o usuário precisa ser informado e dar consentimento antes de qualquer coleta não essencial.
+O site coleta [cookies](https://pt.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)) de terceiros, analytics, publicidade ou rastreamento? Pela LGPD, o usuário precisa ser informado e dar consentimento antes de qualquer coleta não essencial.
 
 **O que fazer:**
 
@@ -25,7 +25,9 @@ O site coleta cookies de terceiros, analytics, publicidade ou rastreamento? Pela
 - Registrar e armazenar o consentimento do usuário com data, hora e versão da política vigente
 - Garantir que cookies não essenciais só sejam disparados após consentimento explícito
 
-**Referência legal:** Art. 7º, I — o consentimento deve ser livre, informado e inequívoco.
+**📁 Exemplo prático:** Consulte a pasta `/exemplos/Banner de Gerenciamento de Cookies/` para ver modelos de implementação de banner com boas práticas.
+
+**Referência legal:** [Art. 7º, I da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art7) — o consentimento deve ser livre, informado e inequívoco.
 
 ---
 
@@ -46,13 +48,13 @@ A empresa precisa comunicar de forma clara e acessível como trata os dados pess
 - A linguagem deve ser clara, direta e compreensível — evitar juridiquês excessivo
 - Atualizar a política sempre que houver mudança relevante no tratamento de dados
 
-**Referência legal:** Art. 9º — o titular tem direito à informação clara sobre o tratamento.
+**Referência legal:** [Art. 9º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art9) — o titular tem direito à informação clara sobre o tratamento.
 
 ---
 
 ### 1.3 Consentimento em formulários
 
-Todo formulário que coleta dados pessoais (cadastro, contato, newsletter, orçamento) precisa registrar o consentimento do usuário de forma explícita.
+Todo formulário que coleta [dados pessoais](https://pt.wikipedia.org/wiki/Dado_pessoal) (cadastro, contato, newsletter, orçamento) precisa registrar o consentimento do usuário de forma explícita.
 
 **O que fazer:**
 
@@ -61,13 +63,13 @@ Todo formulário que coleta dados pessoais (cadastro, contato, newsletter, orça
 - Registrar o consentimento com timestamp e versão da política vigente
 - Não condicionar o uso do serviço ao fornecimento de dados desnecessários (princípio da minimização)
 
-**Referência legal:** Art. 7º, I e Art. 8º — o consentimento deve ser destacado das demais cláusulas.
+**Referência legal:** [Art. 7º, I](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art7) e [Art. 8º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art8) — o consentimento deve ser destacado das demais cláusulas.
 
 ---
 
 ### 1.4 Canal de atendimento ao titular no site
 
-O titular de dados tem o direito de solicitar acesso, correção, exclusão e portabilidade de seus dados a qualquer momento.
+O titular de dados tem o direito de solicitar acesso, correção, exclusão e [portabilidade](https://pt.wikipedia.org/wiki/Portabilidade_de_dados) de seus dados a qualquer momento.
 
 **O que fazer:**
 
@@ -76,13 +78,13 @@ O titular de dados tem o direito de solicitar acesso, correção, exclusão e po
 - Criar processo interno para triagem, análise e resposta das solicitações
 - Documentar todas as solicitações recebidas e as respostas fornecidas
 
-**Referência legal:** Art. 18º — direitos do titular de dados.
+**Referência legal:** [Art. 18º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art18) — direitos do titular de dados.
 
 ---
 
 ## 2. A empresa possui um DPO (Encarregado de Proteção de Dados) nomeado?
 
-O DPO — Data Protection Officer, ou Encarregado — é a pessoa responsável por atuar como canal entre a empresa, os titulares de dados e a ANPD (Autoridade Nacional de Proteção de Dados). A nomeação é obrigatória para controladores de dados.
+O DPO — [Data Protection Officer](https://www.gov.br/cidadania/pt-br/acesso-a-informacao/institucional/anpd), ou Encarregado — é a pessoa responsável por atuar como canal entre a empresa, os titulares de dados e a ANPD. A nomeação é obrigatória para controladores de dados.
 
 - **Se já possui DPO nomeado e com contato publicado:** pular para a etapa 3.
 - **Se não possui:** seguir os itens 2.1 a 2.3 abaixo.
@@ -117,9 +119,11 @@ A nomeação precisa ser formal e o contato do DPO deve ser publicado de forma a
 - Se for colaborador interno, definir a função em seu cargo com as responsabilidades descritas
 - Se for externo, formalizar contrato de prestação de serviço com escopo de atuação definido
 - Publicar o nome e canal de contato do DPO na página de política de privacidade do site
-- Registrar o DPO no portal da ANPD quando exigido (verificar obrigatoriedade conforme porte da empresa)
+- Registrar o DPO no [portal da ANPD](https://www.gov.br/cidadania/pt-br/acesso-a-informacao/institucional/anpd) quando exigido (verificar obrigatoriedade conforme porte da empresa)
 
-**Referência legal:** Art. 41º — a indicação do encarregado e seu contato devem ser divulgados publicamente.
+**📁 Exemplo prático:** Consulte a pasta `/exemplos/Nomeacao do DPO/` para ver modelos de documento de nomeação e termo de responsabilidade.
+
+**Referência legal:** [Art. 41º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art41) — a indicação do encarregado e seu contato devem ser divulgados publicamente.
 
 ---
 
@@ -162,13 +166,15 @@ O mapeamento de dados — também chamado de inventário ou data mapping — é 
 - Registrar o inventário em documento formal (planilha estruturada ou ferramenta de GRC)
 - Revisar o inventário ao menos uma vez por ano ou sempre que houver novo processo de coleta
 
+**📁 Exemplo prático:** Consulte a pasta `/exemplos/Inventario de Dados/` para ver modelos prontos de planilha de inventário com estrutura LGPD-compliant.
+
 ---
 
 ### 3.2 Definir a base legal para cada tratamento
 
-A LGPD exige que todo tratamento de dado pessoal tenha uma base legal definida. Não basta coletar com "boa intenção".
+A LGPD exige que todo tratamento de [dado pessoal](https://pt.wikipedia.org/wiki/Dado_pessoal) tenha uma base legal definida. Não basta coletar com "boa intenção".
 
-**As principais bases legais (Art. 7º):**
+**As principais bases legais ([Art. 7º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art7)):**
 
 | Base Legal | Quando usar |
 |---|---|
@@ -194,8 +200,10 @@ Guardar dados indefinidamente é um risco. A LGPD exige que os dados sejam manti
 
 - Definir prazos de retenção por categoria de dado (ex: dados de clientes por 5 anos após encerramento do contrato, currículos por 6 meses)
 - Documentar os prazos em uma política formal de retenção de dados
-- Criar rotina periódica de descarte seguro — exclusão definitiva ou anonimização dos dados fora do prazo
+- Criar rotina periódica de descarte seguro — exclusão definitiva ou [anonimização](https://pt.wikipedia.org/wiki/Anonimiza%C3%A7%C3%A3o) dos dados fora do prazo
 - Garantir que o descarte de dados em mídias físicas (HDs, pendrives, documentos impressos) seja feito de forma segura e rastreável
+
+**📁 Exemplo prático:** Consulte a pasta `/exemplos/Retencao e Descarte de Dados/` para ver templates de política de retenção e guia de procedimentos de descarte seguro.
 
 ---
 
@@ -211,11 +219,13 @@ A empresa compartilha dados pessoais sempre que utiliza fornecedores, plataforma
   - Qual a finalidade do compartilhamento
   - Onde os dados ficam armazenados (país/região — atenção para transferências internacionais)
   - Qual o prazo de retenção pelo terceiro
-- Incluir cláusulas de proteção de dados (DPA — Data Processing Agreement) em todos os contratos com fornecedores que tratam dados pessoais
+- Incluir cláusulas de proteção de dados ([DPA — Data Processing Agreement](https://en.wikipedia.org/wiki/Data_processing_agreement)) em todos os contratos com fornecedores que tratam dados pessoais
 - Garantir que os terceiros possuam políticas de segurança compatíveis com os requisitos da LGPD
 - Revisar a lista de terceiros ao menos uma vez por ano ou sempre que houver mudança de fornecedor
 
-**Referência legal:** Art. 39º — o operador deve realizar o tratamento segundo as instruções fornecidas pelo controlador. Art. 42º — o operador responde solidariamente pelos danos causados quando descumprir as obrigações da LGPD.
+**📁 Exemplo prático:** Consulte a pasta `/exemplos/DPA/` para ver modelos de Data Processing Agreement e lista de verificação de conformidade com fornecedores.
+
+**Referência legal:** [Art. 39º](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art39) — o operador deve realizar o tratamento segundo as instruções fornecidas pelo controlador. [Art. 42º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art42) — o operador responde solidariamente pelos danos causados quando descumprir as obrigações da LGPD.
 
 ---
 
@@ -234,7 +244,7 @@ Acesso irrestrito a dados pessoais é um dos principais vetores de risco — tan
 
 - Mapear todos os sistemas que armazenam dados pessoais
 - Definir perfis de acesso por função (ex: analista acessa apenas dados do seu departamento, gestor acessa relatórios agregados)
-- Aplicar o princípio do menor privilégio: cada colaborador acessa apenas o que precisa para sua função
+- Aplicar o princípio do [menor privilégio](https://pt.wikipedia.org/wiki/Princ%C3%ADpio_do_menor_privil%C3%A9gio): cada colaborador acessa apenas o que precisa para sua função
 - Registrar logs de acesso a sistemas sensíveis (quem acessou, quando, o quê)
 - Criar processo formal de concessão, revisão e revogação de acessos — especialmente em casos de desligamento
 
@@ -269,13 +279,15 @@ Vazamentos de dados são uma realidade. A LGPD exige que incidentes que possam c
   1. Detecção e contenção do incidente
   2. Avaliação do impacto (quais dados, quantos titulares afetados)
   3. Notificação interna ao DPO e à liderança
-  4. Comunicação à ANPD (quando obrigatório)
+  4. Comunicação à [ANPD](https://www.gov.br/cidadania/pt-br/acesso-a-informacao/institucional/anpd) (quando obrigatório)
   5. Comunicação aos titulares afetados (quando necessário)
   6. Registro e análise pós-incidente
 - Testar o plano ao menos uma vez por ano com simulações internas
 - Documentar todos os incidentes ocorridos, mesmo os de baixo impacto
 
-**Referência legal:** Art. 48º — o controlador deve comunicar à ANPD e ao titular a ocorrência de incidente que possa acarretar risco ou dano relevante.
+**📁 Exemplo prático:** Consulte a pasta `/exemplos/Resposta a Incidentes/` para ver fluxograma de resposta e templates de comunicação com titulares e ANPD.
+
+**Referência legal:** [Art. 48º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art48) — o controlador deve comunicar à ANPD e ao titular a ocorrência de incidente que possa acarretar risco ou dano relevante.
 
 ---
 
@@ -292,10 +304,10 @@ A maior parte dos incidentes de dados tem origem humana — envio de arquivo err
 
 **O que fazer:**
 
-- Desenvolver trilha de treinamento obrigatório sobre LGPD para todos os colaboradores — especialmente os que lidam com dados pessoais
+- Desenvolver trilha de treinamento obrigatório sobre LGPD para todos os colaboradores — especialmente os que lidam com [dados pessoais](https://pt.wikipedia.org/wiki/Dado_pessoal)
 - O treinamento deve cobrir, no mínimo:
-  - O que é dado pessoal e dado sensível
-  - Quais são os direitos dos titulares
+  - O que é [dado pessoal](https://pt.wikipedia.org/wiki/Dado_pessoal) e [dado sensível](https://pt.wikipedia.org/wiki/Dados_sens%C3%ADveis)
+  - Quais são os [direitos dos titulares](https://pt.wikipedia.org/wiki/GDPR#Direitos_dos_titulares_dos_dados)
   - Como identificar e reportar um incidente de dados
   - Boas práticas de segurança (senhas, e-mails, dispositivos)
 - Registrar a participação de cada colaborador com data e versão do treinamento
