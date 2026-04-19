@@ -1,0 +1,27 @@
+Política de uso aceitável de recursos de TI
+Classificação da informação — o que é público, interno, confidencial e restrito
+pri - Engenharia social e phishing — como reconhecer e o que fazer	
+pri - Gestão de senhas e autenticação
+pri - Uso de dispositivos pessoais (BYOD)
+pri - Trabalho remoto e redes seguras
+pri - Uso seguro de e-mail e comunicadores corporativos
+Descarte seguro de informações físicas e digitais
+pri - Mesa limpa e tela limpa
+Reporte de incidentes — cultura de não punição ao erro
+Redes sociais e exposição de informações corporativas
+Onboarding de segurança para novos colaboradores
+Trilha de treinamento periódico e reciclagem
+Campanhas internas de conscientização
+
+Lista de Atividades proativas
+
+Plataforma de e-learning com trilhas gamificadas e ranking de pontuação (Trazer exemplos depois)
+Quiz mensal por e-mail ou intranet com ranking entre departamentos ()
+Simulações de phishing com domínio falso e página educativa no clique (Trazer um How to do this)
+Newsletter interna descontraída e periódica sobre temas de segurança (Trazer uma lista completa de temas)
+Campanha temática mensal — um tema por mês, comunicação progressiva (Criar um conteudo)
+Certificado de conclusão de trilhas para incentivar engajamento (Lista de cursos gratuitos? Plataformas com cursos? Ou lista de cursos pagos, plataformas que fazem isso?)
+Recompensa simbólica para quem reportar tentativa de phishing real (INTERESSANTE para time de tecnologia)
+Vídeos curtos internos (formato reels) sobre boas práticas (Internamente somente)
+
+
