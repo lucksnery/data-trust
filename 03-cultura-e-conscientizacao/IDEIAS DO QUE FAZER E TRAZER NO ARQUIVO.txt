@@ -23,5 +23,6 @@ Campanha temática mensal — um tema por mês, comunicação progressiva (Criar
 Certificado de conclusão de trilhas para incentivar engajamento (Lista de cursos gratuitos? Plataformas com cursos? Ou lista de cursos pagos, plataformas que fazem isso?)
 Recompensa simbólica para quem reportar tentativa de phishing real (INTERESSANTE para time de tecnologia)
 Vídeos curtos internos (formato reels) sobre boas práticas (Internamente somente)
+Segurança em viagens corporativas — dispositivos em trânsito, redes de hotel, fronteiras
 
 
