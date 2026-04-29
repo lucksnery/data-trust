@@ -1,10 +1,8 @@
 # Controle de Acessos — Guia de Diagnóstico e Ação
 
-Este documento orienta o executor do projeto na identificação, estruturação e controle de acessos a sistemas e dados dentro da empresa, conforme a [Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm).  
+Este documento orienta o executor do projeto na identificação, estruturação e controle de acessos a sistemas e dados dentro da empresa, conforme a [Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm).
 
-A abordagem é sequencial: cada etapa começa com uma pergunta de diagnóstico e, a partir da resposta, direciona para as ações necessárias ou para o próximo ponto.
-
-O objetivo é garantir que apenas pessoas autorizadas tenham acesso aos recursos corretos, reduzindo riscos de vazamentos, fraudes e acessos indevidos.
+A abordagem é sequencial: cada etapa começa com uma pergunta de diagnóstico e, a partir da resposta, direciona para as ações necessárias ou para o próximo ponto. O objetivo não é apenas identificar falhas, mas garantir que apenas pessoas autorizadas tenham acesso aos recursos corretos, reduzindo riscos de vazamentos, fraudes e acessos indevidos.
 
 ---
 
@@ -28,17 +26,17 @@ A empresa precisa saber exatamente quem acessa o quê.
 - Registrar quais permissões cada usuário possui (leitura, edição, administrador)  
 - Consolidar essas informações em uma matriz de acessos (planilha ou ferramenta)  
 
-📁 **Exemplo prático:** Consulte `/exemplos/Matriz de Acessos/`
+📁 Exemplo prático: Consulte a pasta `/exemplos/Matriz de Acessos/` para ver modelos de controle de usuários e permissões.
 
 **Referência legal:**  
-[Art. 6º, VII — Princípio da Segurança](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)  
-[Art. 46º — Medidas de Segurança](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
+[Art. 6º, VII da LGPD — princípio da segurança](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)  
+[Art. 46º da LGPD — medidas de segurança](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
 
 ---
 
 ### 1.2 Definição de responsáveis pelos acessos
 
-Sem responsáveis definidos, o controle se torna informal e inseguro.
+Sem responsáveis definidos, o controle de acessos se torna informal e inseguro.
 
 **O que fazer:**
 
@@ -47,7 +45,7 @@ Sem responsáveis definidos, o controle se torna informal e inseguro.
 - Documentar esse processo formalmente  
 
 **Referência legal:**  
-[Art. 6º, X — Responsabilização e Prestação de Contas](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
+[Art. 6º, X da LGPD — responsabilização e prestação de contas](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
 
 ---
 
@@ -57,13 +55,13 @@ A concessão de acesso não deve ser feita de forma ad hoc.
 
 **O que fazer:**
 
-- Criar fluxo de solicitação de acesso (ex: e-mail, sistema ou formulário)  
-- Exigir aprovação do gestor responsável  
-- Registrar todas as concessões e alterações  
+- Criar fluxo de solicitação de acesso (ex: via e-mail, sistema ou formulário)  
+- Exigir aprovação do gestor responsável antes da liberação  
+- Registrar todas as concessões e alterações de acesso  
 - Padronizar o processo para toda a empresa  
 
 **Referência legal:**  
-[Art. 46º — Segurança de Dados](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
+[Art. 46º da LGPD — medidas técnicas e administrativas](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
 
 ---
 
@@ -71,7 +69,7 @@ A concessão de acesso não deve ser feita de forma ad hoc.
 
 Nem todos os usuários devem ter o mesmo nível de acesso.
 
-- **Se não aplica:** seguir os itens 2.1 e 2.2  
+- **Se não aplica:** seguir os itens 2.1 e 2.2 abaixo  
 - **Se aplica:** pular para a etapa 3  
 
 ---
@@ -82,32 +80,32 @@ O acesso deve ser baseado na função do colaborador.
 
 **O que fazer:**
 
-- Criar perfis por cargo ou função (financeiro, RH, TI, etc.)  
-- Definir quais sistemas cada perfil pode acessar  
-- Evitar concessões individuais fora do padrão  
+- Criar perfis de acesso por cargo ou função (ex: financeiro, RH, TI, gestor)  
+- Definir quais sistemas e dados cada perfil pode acessar  
+- Evitar concessões individuais fora do padrão sempre que possível  
 
 📘 Saiba mais: [RBAC — Role-Based Access Control](https://pt.wikipedia.org/wiki/Controle_de_acesso_baseado_em_fun%C3%A7%C3%B5es)
 
 **Referência legal:**  
-[Art. 6º, III — Princípio da Necessidade](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
+[Art. 6º, III da LGPD — princípio da necessidade](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
 
 ---
 
-### 2.2 Princípio do menor privilégio
+### 2.2 Aplicação do princípio do menor privilégio
 
-Cada usuário deve acessar apenas o necessário.
+Cada usuário deve acessar apenas o necessário para sua função.
 
 **O que fazer:**
 
-- Revisar acessos e remover excessos  
-- Evitar privilégios administrativos desnecessários  
-- Implementar política de restrição  
+- Revisar acessos atuais e remover permissões excessivas  
+- Garantir que usuários não tenham privilégios administrativos sem necessidade  
+- Implementar política clara de restrição de acessos  
 
-📘 Saiba mais: [Princípio do Menor Privilégio](https://pt.wikipedia.org/wiki/Princ%C3%ADpio_do_menor_privil%C3%A9gio)
+📘 Saiba mais: [Princípio do menor privilégio](https://pt.wikipedia.org/wiki/Princ%C3%ADpio_do_menor_privil%C3%A9gio)
 
 **Referência legal:**  
-[Art. 6º, III](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)  
-[Art. 46º](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
+[Art. 6º, III da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)  
+[Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
 
 **Referência técnica:**  
 [ISO/IEC 27001](https://www.iso.org/isoiec-27001-information-security.html)
@@ -116,9 +114,9 @@ Cada usuário deve acessar apenas o necessário.
 
 ## 3. Existe controle sobre o ciclo de vida dos acessos?
 
-A gestão deve acompanhar toda a jornada do colaborador.
+A gestão de acessos deve acompanhar toda a jornada do colaborador na empresa.
 
-- **Se não existe:** seguir 3.1 a 3.3  
+- **Se não existe:** seguir os itens 3.1 a 3.3 abaixo  
 - **Se existe:** pular para a etapa 4  
 
 ---
@@ -129,25 +127,27 @@ A gestão deve acompanhar toda a jornada do colaborador.
 
 **O que fazer:**
 
-- Definir acessos padrão por função  
-- Garantir aprovação antes da concessão  
+- Definir acessos padrão por função no momento da contratação  
+- Garantir que todo acesso seja aprovado antes de ser concedido  
 - Registrar data, responsável e justificativa  
 
 **Referência legal:**  
-[Art. 6º, X](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
+[Art. 6º, X da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
 
 ---
 
 ### 3.2 Alteração de acesso (movimentações internas)
 
+Mudanças de cargo devem refletir nos acessos.
+
 **O que fazer:**
 
-- Revisar acessos ao mudar de função  
-- Remover acessos antigos  
-- Atualizar permissões  
+- Revisar acessos sempre que houver mudança de função  
+- Remover acessos antigos que não são mais necessários  
+- Atualizar permissões conforme nova responsabilidade  
 
 **Referência legal:**  
-[Art. 6º, III](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
+[Art. 6º, III da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
 
 ---
 
@@ -157,20 +157,22 @@ A gestão deve acompanhar toda a jornada do colaborador.
 
 **O que fazer:**
 
-- Revogar acessos imediatamente  
-- Usar checklist de desligamento  
-- Bloquear e-mail e sistemas  
+- Revogar todos os acessos imediatamente após desligamento  
+- Incluir checklist de acessos no processo de offboarding  
+- Garantir bloqueio de e-mail, sistemas e dispositivos  
 
-📁 **Exemplo:** `/exemplos/Offboarding/`
+📁 Exemplo prático: Consulte a pasta `/exemplos/Offboarding/` para ver checklist completo de revogação de acessos.
 
 **Referência legal:**  
-[Art. 46º](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
+[Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
 
 ---
 
 ## 4. A empresa possui políticas de autenticação seguras?
 
-- **Se não possui:** seguir 4.1 e 4.2  
+O controle de acesso depende diretamente da segurança das credenciais.
+
+- **Se não possui:** seguir os itens 4.1 e 4.2 abaixo  
 - **Se possui:** pular para a etapa 5  
 
 ---
@@ -179,27 +181,27 @@ A gestão deve acompanhar toda a jornada do colaborador.
 
 **O que fazer:**
 
-- Exigir senhas fortes  
-- Proibir reutilização  
-- Definir troca periódica  
-- Bloquear tentativas inválidas  
+- Exigir senhas fortes (mínimo de caracteres, complexidade)  
+- Proibir reutilização de senhas  
+- Definir política de troca periódica  
+- Bloquear acesso após tentativas inválidas  
 
 📘 Saiba mais: [Autenticação](https://pt.wikipedia.org/wiki/Autentica%C3%A7%C3%A3o)
 
 **Referência legal:**  
-[Art. 46º](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
+[Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
 
 ---
 
 ### 4.2 Autenticação multifator (MFA / 2FA)
 
-📘 Saiba mais: [Autenticação de dois fatores (2FA)](https://pt.wikipedia.org/wiki/Autentica%C3%A7%C3%A3o_de_dois_fatores)
+📘 Saiba mais: [Autenticação de dois fatores](https://pt.wikipedia.org/wiki/Autentica%C3%A7%C3%A3o_de_dois_fatores)
 
 **O que fazer:**
 
-- Implementar MFA em sistemas críticos  
-- Priorizar contas administrativas  
-- Utilizar apps autenticadores  
+- Implementar MFA em sistemas críticos (e-mail, VPN, sistemas financeiros)  
+- Priorizar contas com privilégios elevados  
+- Utilizar aplicativos autenticadores ou tokens  
 
 **Referência técnica:**  
 [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
@@ -208,30 +210,35 @@ A gestão deve acompanhar toda a jornada do colaborador.
 
 ## 5. A empresa registra e monitora acessos?
 
-- **Se não registra:** seguir 5.1  
+Sem rastreabilidade, não é possível investigar incidentes.
+
+- **Se não registra:** seguir o item 5.1 abaixo  
 - **Se registra:** pular para a etapa 6  
 
 ---
 
-### 5.1 Logs de acesso
+### 5.1 Implementação de logs de acesso
 
 📘 Saiba mais: [Log (informática)](https://pt.wikipedia.org/wiki/Log_(inform%C3%A1tica))
 
 **O que fazer:**
 
-- Registrar acessos (quem, quando, ação)  
-- Proteger logs contra alteração  
-- Monitorar comportamentos suspeitos  
+- Registrar acessos a sistemas sensíveis (quem, quando, o que fez)  
+- Garantir que logs não possam ser alterados por usuários comuns  
+- Definir tempo de retenção dos logs  
+- Monitorar acessos suspeitos ou fora do padrão  
 
 **Referência legal:**  
-[Art. 6º, X](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)  
-[Art. 46º](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
+[Art. 6º, X da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)  
+[Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
 
 ---
 
 ## 6. A empresa revisa periodicamente os acessos?
 
-- **Se não revisa:** seguir 6.1  
+Acessos tendem a se acumular ao longo do tempo.
+
+- **Se não revisa:** seguir o item 6.1 abaixo  
 - **Se revisa:** pular para a etapa 7  
 
 ---
@@ -242,32 +249,35 @@ A gestão deve acompanhar toda a jornada do colaborador.
 
 **O que fazer:**
 
-- Revisão trimestral ou semestral  
-- Validar com gestores  
-- Remover acessos indevidos  
-- Documentar revisões  
+- Realizar revisão periódica (trimestral ou semestral)  
+- Validar com gestores se os acessos ainda são necessários  
+- Remover acessos obsoletos ou indevidos  
+- Documentar as revisões realizadas  
 
-📁 **Exemplo:** `/exemplos/Revisao de Acessos/`
+📁 Exemplo prático: Consulte a pasta `/exemplos/Revisao de Acessos/`
 
 ---
 
 ## 7. Existe controle sobre acessos de terceiros?
 
-- **Se não existe:** seguir 7.1  
+Fornecedores também podem representar risco.
+
+- **Se não existe:** seguir o item 7.1 abaixo  
 - **Se existe:** pular para a etapa 8  
 
 ---
 
-### 7.1 Gestão de terceiros
+### 7.1 Gestão de acessos de terceiros
 
 📘 Saiba mais: [Terceirização](https://pt.wikipedia.org/wiki/Terceiriza%C3%A7%C3%A3o)
 
 **O que fazer:**
 
-- Identificar terceiros com acesso  
-- Conceder acessos limitados  
-- Revisar periodicamente  
-- Revogar ao fim do contrato  
+- Identificar todos os terceiros com acesso a sistemas ou dados  
+- Conceder acessos limitados e temporários  
+- Exigir autenticação segura  
+- Revisar acessos periodicamente  
+- Revogar acessos ao fim do contrato  
 
 **Referência legal:**  
 [Art. 39º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art39)
@@ -276,50 +286,62 @@ A gestão deve acompanhar toda a jornada do colaborador.
 
 ## 8. A empresa possui controle de acesso físico?
 
-- **Se não possui:** seguir 8.1  
+A segurança não é apenas digital.
+
+- **Se não possui:** seguir o item 8.1 abaixo  
 - **Se possui:** pular para a etapa 9  
 
 ---
 
-### 8.1 Controle físico
+### 8.1 Controle de acesso a ambientes físicos
 
 📘 Saiba mais: [Controle de acesso](https://pt.wikipedia.org/wiki/Controle_de_acesso)
 
 **O que fazer:**
 
-- Restringir áreas sensíveis  
-- Utilizar crachá ou biometria  
+- Restringir acesso a áreas sensíveis (servidores, arquivos físicos)  
+- Utilizar crachás, biometria ou controle de visitantes  
 - Registrar entradas e saídas  
+- Acompanhar visitantes dentro da empresa  
+
+**Referência legal:**  
+[Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46)
 
 ---
 
-## 9. Existe cultura e conscientização sobre acessos?
+## 9. A empresa possui políticas e cultura relacionadas ao controle de acessos?
 
-- **Se não existe:** seguir 9.1  
-- **Se existe:** encerrar diagnóstico  
+Tecnologia sem cultura não é suficiente.
+
+- **Se não possui:** seguir o item 9.1 abaixo  
+- **Se possui:** encerrar o diagnóstico e avançar para a fase DO do framework  
 
 ---
 
-### 9.1 Conscientização
+### 9.1 Conscientização sobre controle de acessos
 
 📘 Saiba mais: [Engenharia social](https://pt.wikipedia.org/wiki/Engenharia_social_(seguran%C3%A7a))
 
 **O que fazer:**
 
-- Não compartilhar credenciais  
-- Bloquear tela ao se ausentar  
-- Evitar contas compartilhadas  
-- Promover boas práticas  
+- Orientar colaboradores a não compartilhar credenciais  
+- Incentivar bloqueio de tela ao se ausentar  
+- Proibir uso de contas compartilhadas  
+- Promover boas práticas de uso de sistemas  
+- Integrar o tema aos treinamentos de segurança  
+
+**Referência legal:**  
+[Art. 6º, VII e X da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6)
 
 ---
 
-## ⚠️ Riscos comuns
+## ⚠️ Riscos comuns associados à ausência de controle de acessos
 
 - Acessos indevidos por colaboradores  
 - Ex-colaboradores com acesso ativo  
-- Vazamento de dados sensíveis  
+- Vazamento de informações sensíveis  
 - Uso indevido de credenciais  
-- Falta de rastreabilidade  
+- Falta de rastreabilidade em incidentes  
 
 ---
 
