@@ -1,12 +1,12 @@
 # Gestão de Riscos — Guia de Diagnóstico e Ação
 
-Este documento orienta o executor do projeto na identificação, análise e tratamento de riscos relacionados à segurança da informação e ao tratamento de dados dentro da empresa. A abordagem é sequencial: cada etapa começa com uma pergunta de diagnóstico e, a partir da resposta, direciona para as ações necessárias ou para o próximo ponto. O objetivo não é eliminar totalmente os riscos, mas identificar, avaliar e reduzir seus impactos a níveis aceitáveis, garantindo maior segurança e continuidade das operações.
+Este documento orienta o executor do projeto na identificação, análise e tratamento de riscos relacionados à segurança da informação, processos e dados dentro da empresa. A abordagem é sequencial: cada etapa começa com uma pergunta de diagnóstico e, a partir da resposta, direciona para as ações necessárias ou para o próximo ponto. O objetivo não é eliminar totalmente os riscos, mas identificar, avaliar e reduzir seus impactos a níveis aceitáveis, garantindo maior segurança, previsibilidade e continuidade das operações.
 
 ---
 
 ## 1. A empresa possui um processo formal de gestão de riscos?
 
-Considere qualquer tipo de risco relacionado a dados, sistemas, pessoas ou processos.
+Considere qualquer tipo de risco relacionado a dados, sistemas, pessoas, processos ou operações.
 
 - **Se não possui:** seguir os itens 1.1 a 1.3 abaixo.  
 - **Se possui:** pular para a etapa 2.  
@@ -15,13 +15,13 @@ Considere qualquer tipo de risco relacionado a dados, sistemas, pessoas ou proce
 
 ### 1.1 Definição de metodologia de gestão de riscos
 
-A empresa precisa de um padrão para identificar e tratar riscos.
+A empresa precisa de um padrão claro para identificar e tratar riscos.
 
 **O que fazer:**
 
 - Definir uma metodologia de gestão de riscos (qualitativa, quantitativa ou híbrida)  
-- Estabelecer critérios de avaliação de risco (probabilidade x impacto)  
-- Padronizar a forma de registro e análise dos riscos  
+- Estabelecer critérios de avaliação (probabilidade x impacto)  
+- Padronizar a forma de identificação e análise de riscos  
 - Documentar a metodologia em política formal  
 
 **Referência técnica:** [ISO/IEC 27005](https://www.iso.org/standard/75281.html) — gestão de riscos em segurança da informação.
@@ -34,35 +34,38 @@ Não é possível tratar riscos que não são conhecidos.
 
 **O que fazer:**
 
-- Mapear ativos da empresa (dados, sistemas, processos, pessoas)  
+- Mapear os ativos da empresa (dados, sistemas, pessoas, processos)  
 - Identificar ameaças como:
   - Vazamento de dados  
+  - Falha de sistema  
   - Erro humano  
-  - Ataques cibernéticos ([phishing](https://pt.wikipedia.org/wiki/Phishing), [ransomware](https://pt.wikipedia.org/wiki/Ransomware))  
-- Identificar vulnerabilidades (ex: falta de controle, sistemas desatualizados)  
+  - Ataques externos ([phishing](https://pt.wikipedia.org/wiki/Phishing), [ransomware](https://pt.wikipedia.org/wiki/Ransomware))  
+- Identificar vulnerabilidades (ex: ausência de controle, sistemas desatualizados, falha de processo)  
 - Registrar todos os riscos identificados  
 
 📁 **Exemplo prático:** Consulte a pasta `/exemplos/Identificacao de Riscos/` para ver modelos de levantamento de riscos.
 
-**Referência legal:** [Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46) — obrigação de proteger dados contra acessos não autorizados e incidentes.
+**Referência legal:** [Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46) — obrigação de adotar medidas de segurança para proteção contra riscos e incidentes.
 
 ---
 
 ### 1.3 Registro de riscos (Risk Register)
 
-Os riscos precisam ser documentados e acompanhados.
+Os riscos precisam ser documentados e acompanhados ao longo do tempo.
 
 **O que fazer:**
 
 - Criar um registro centralizado de riscos ([Risk Register](https://en.wikipedia.org/wiki/Risk_register)) em planilha ou ferramenta  
 - Incluir:
-  - Descrição do risco  
-  - Causa/origem  
+  - Descrição  
+  - Causa  
   - Impacto  
   - Probabilidade  
   - Responsável  
 - Classificar riscos por nível de criticidade  
 - Atualizar o registro periodicamente  
+
+📁 **Exemplo prático:** Consulte a pasta `/exemplos/Risk Register/` para ver modelos de registro de riscos.
 
 **Referência legal:** [Art. 6º, X da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6) — responsabilização e prestação de contas.
 
@@ -81,26 +84,26 @@ Nem todo risco tem o mesmo impacto ou prioridade.
 
 **O que fazer:**
 
-- Definir critérios claros de probabilidade (baixo, médio, alto)  
+- Definir critérios de probabilidade (baixo, médio, alto)  
 - Definir critérios de impacto:
   - Financeiro  
-  - Reputacional  
   - Operacional  
+  - Reputacional  
   - Legal  
 - Avaliar cada risco com base nesses critérios  
-- Classificar o nível de risco (baixo, médio, alto, crítico)  
+- Classificar o nível de risco  
 
 ---
 
 ### 2.2 Priorização de riscos
 
-Nem todos os riscos devem ser tratados imediatamente.
+Nem todos os riscos devem ser tratados ao mesmo tempo.
 
 **O que fazer:**
 
 - Priorizar riscos com maior impacto e probabilidade  
 - Definir ordem de tratamento  
-- Focar primeiro nos riscos críticos  
+- Focar inicialmente nos riscos críticos  
 
 **Referência técnica:** [ISO/IEC 27005](https://www.iso.org/standard/75281.html) — avaliação e priorização de riscos.
 
@@ -108,7 +111,7 @@ Nem todos os riscos devem ser tratados imediatamente.
 
 ## 3. A empresa define planos de tratamento para os riscos?
 
-Identificar riscos sem agir sobre eles não gera valor.
+Identificar riscos sem agir sobre eles não reduz exposição.
 
 - **Se não define:** seguir os itens 3.1 a 3.4 abaixo.  
 - **Se define:** pular para a etapa 4.  
@@ -117,16 +120,14 @@ Identificar riscos sem agir sobre eles não gera valor.
 
 ### 3.1 Estratégias de tratamento de risco
 
-Existem diferentes formas de lidar com riscos.
-
 **O que fazer:**
 
-- Definir estratégia para cada risco:
+- Definir estratégia para cada risco identificado:
   - **Mitigar:** reduzir o risco  
   - **Aceitar:** quando o risco é baixo  
   - **Transferir:** (ex: seguros ou terceiros)  
   - **Evitar:** interromper a atividade de risco  
-- Documentar a decisão para cada risco  
+- Documentar a decisão adotada  
 
 ---
 
@@ -140,12 +141,12 @@ Existem diferentes formas de lidar com riscos.
 
 - Controle de acessos  
 - Backup de dados  
-- Treinamento de colaboradores  
 - Monitoramento de sistemas  
+- Treinamento de colaboradores  
 
 - Atribuir responsáveis pela implementação  
 
-**Referência legal:** [Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46) — adoção de medidas de segurança.
+**Referência legal:** [Art. 46º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art46) — adoção de medidas de segurança para proteção de dados.
 
 ---
 
@@ -153,9 +154,9 @@ Existem diferentes formas de lidar com riscos.
 
 **O que fazer:**
 
-- Criar plano de ação com prazos e responsáveis  
-- Definir etapas claras de implementação  
-- Acompanhar execução dos planos  
+- Criar plano de ação com responsáveis e prazos  
+- Definir etapas claras de execução  
+- Acompanhar o progresso das ações  
 
 ---
 
@@ -163,9 +164,9 @@ Existem diferentes formas de lidar com riscos.
 
 **O que fazer:**
 
-- Documentar decisões de aceitação ou tratamento  
+- Documentar decisões de aceitação, mitigação ou transferência  
 - Manter histórico das ações realizadas  
-- Garantir rastreabilidade  
+- Garantir rastreabilidade das decisões  
 
 **Referência legal:** [Art. 6º, X da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6) — prestação de contas.
 
@@ -173,7 +174,7 @@ Existem diferentes formas de lidar com riscos.
 
 ## 4. A empresa monitora e revisa os riscos periodicamente?
 
-Riscos mudam ao longo do tempo.
+Riscos mudam conforme o ambiente e os processos evoluem.
 
 - **Se não monitora:** seguir o item 4.1 abaixo.  
 - **Se monitora:** pular para a etapa 5.  
@@ -185,17 +186,17 @@ Riscos mudam ao longo do tempo.
 **O que fazer:**
 
 - Revisar riscos periodicamente (trimestral ou semestral)  
-- Atualizar probabilidade e impacto conforme mudanças  
+- Atualizar avaliações de probabilidade e impacto  
 - Identificar novos riscos  
 - Reavaliar controles implementados  
 
-**Referência técnica:** [ISO/IEC 27005](https://www.iso.org/standard/75281.html) — monitoramento contínuo.
+**Referência técnica:** [ISO/IEC 27005](https://www.iso.org/standard/75281.html) — monitoramento contínuo de riscos.
 
 ---
 
-## 5. A empresa possui plano de resposta a riscos materializados (incidentes)?
+## 5. A empresa possui integração entre gestão de riscos e incidentes?
 
-Quando o risco acontece, ele se torna um incidente.
+Quando um risco se concretiza, ele se torna um incidente.
 
 - **Se não possui:** seguir o item 5.1 abaixo.  
 - **Se possui:** pular para a etapa 6.  
@@ -206,18 +207,18 @@ Quando o risco acontece, ele se torna um incidente.
 
 **O que fazer:**
 
-- Definir fluxo de resposta para riscos que se concretizam  
-- Integrar gestão de riscos com plano de incidentes  
+- Definir fluxo de resposta para riscos materializados  
+- Integrar gestão de riscos ao plano de resposta a incidentes  
 - Definir responsáveis por resposta e comunicação  
 - Registrar ocorrências e aprendizados  
 
-**Referência legal:** [Art. 48º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art48) — comunicação de incidentes.
+**Referência legal:** [Art. 48º da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art48) — comunicação de incidentes de segurança.
 
 ---
 
 ## 6. A alta gestão está envolvida na gestão de riscos?
 
-Gestão de riscos não é apenas responsabilidade da TI.
+Gestão de riscos exige apoio da liderança.
 
 - **Se não está:** seguir o item 6.1 abaixo.  
 - **Se está:** pular para a etapa 7.  
@@ -228,12 +229,12 @@ Gestão de riscos não é apenas responsabilidade da TI.
 
 **O que fazer:**
 
-- Envolver liderança na tomada de decisão sobre riscos  
-- Apresentar relatórios periódicos de risco  
+- Envolver a liderança na tomada de decisões sobre riscos  
 - Definir nível de risco aceitável ([risk appetite](https://en.wikipedia.org/wiki/Risk_appetite))  
-- Garantir apoio institucional às ações de mitigação  
+- Apresentar relatórios periódicos de riscos  
+- Garantir apoio às ações de mitigação  
 
-**Referência legal:** [Art. 6º, X da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6) — responsabilização.
+**Referência legal:** [Art. 6º, X da LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm#art6) — responsabilização e governança.
 
 ---
 
@@ -251,9 +252,9 @@ Sem cultura, o processo não se sustenta.
 **O que fazer:**
 
 - Treinar colaboradores sobre identificação de riscos  
-- Incentivar reporte de vulnerabilidades  
-- Integrar gestão de riscos aos processos do dia a dia  
-- Promover visão preventiva, não apenas reativa  
+- Incentivar o reporte de riscos e vulnerabilidades  
+- Integrar gestão de riscos ao dia a dia das áreas  
+- Promover cultura preventiva, não apenas reativa  
 
 ---
 
@@ -262,8 +263,8 @@ Sem cultura, o processo não se sustenta.
 - Falta de preparo para incidentes  
 - Decisões sem análise de impacto  
 - Exposição a ameaças evitáveis  
-- Perdas financeiras e reputacionais  
-- Não conformidade com a LGPD  
+- Perdas financeiras e operacionais  
+- Não conformidade com requisitos legais e regulatórios  
 
 ---
 
