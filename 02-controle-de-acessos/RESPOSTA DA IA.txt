@@ -1,0 +1,40 @@
+Análise direta.
+
+O que está bom
+A estrutura sequencial de diagnóstico funciona e é consistente com o padrão do projeto. Os tópicos centrais estão presentes: mapeamento, RBAC, menor privilégio, 2FA, logs, revisão periódica, terceiros e política formal. Para uma base de controle de acessos, o esqueleto está correto.
+
+Problemas reais
+1. Ficou colado na LGPD quando não deveria
+O documento cita a LGPD em praticamente toda seção de referência legal — sendo que o objetivo dessa etapa era justamente ampliar a visão para além da LGPD. Controle de acessos é um tema de segurança da informação com frameworks próprios (ISO 27001, NIST, CIS Controls). A LGPD pode aparecer como contexto, não como âncora principal. Do jeito que está, parece uma extensão do documento de LGPD, não uma etapa própria.
+2. Superficialidade técnica generalizada
+Cada seção para em "o que fazer" com bullets genéricos. Não há orientação de como fazer na prática — sem exemplos de ferramentas, sem critérios concretos, sem referências de mercado. Compare com o documento de cultura e educação, que trouxe tabela de plataformas, passo a passo de simulação de phishing, calendário anual. Aqui nada disso existe. Um executor lendo esse documento sabe o que precisa fazer, mas não tem nenhum caminho prático para começar.
+3. Lacunas de conteúdo relevantes
+Temas que deveriam estar e não estão:
+
+Gestão de identidades (IAM/IdP): nenhuma menção a ferramentas ou conceitos de Identity and Access Management. Azure AD, Okta, Google Workspace, SSO — são a base operacional de controle de acessos em empresas hoje. Ignorar isso é ignorar como o problema é resolvido na prática.
+Contas privilegiadas (PAM): acesso de administradores, contas de serviço e acesso root são os alvos mais críticos em qualquer ambiente. Privileged Access Management é um capítulo inteiro em qualquer framework sério. Não tem uma linha sobre isso.
+Offboarding detalhado: o item 2.3 menciona revogar acessos no desligamento, mas em uma linha. É um dos processos mais críticos e mais falhos nas empresas — merecia uma seção própria com checklist de sistemas, prazo, responsável e validação.
+Acesso físico: controle de acessos não é só digital. Salas de servidores, armários de TI, impressoras com dados, crachás e catracas fazem parte do escopo e não foram tocados.
+Contas de serviço e integrações entre sistemas: APIs, automações, sistemas que se comunicam entre si — essas credenciais raramente são gerenciadas com o mesmo rigor das contas humanas e são um vetor frequente de comprometimento.
+Zero Trust como conceito orientador: o modelo de "nunca confie, sempre verifique" é o paradigma atual de controle de acessos, especialmente em ambientes com trabalho remoto e cloud. Não precisa ser técnico, mas o conceito deveria orientar o documento.
+Gestão de acessos em ambientes cloud: se a empresa usa AWS, Azure ou GCP, o controle de acessos tem especificidades próprias (IAM policies, roles, service accounts). Nenhuma menção.
+
+4. Ausência de exemplos práticos e referências de ferramentas
+O documento de LGPD citou CookieYes, Osano, Cookiebot, IAPP, portal da ANPD. O de cultura citou KnowBe4, TalentLMS, Bitwarden, entre outros. Este documento não cita nenhuma ferramenta, nenhuma plataforma, nenhum exemplo concreto. Para um executor de projeto, isso é uma lacuna grande.
+5. Estrutura desigual em relação ao restante do projeto
+Os outros documentos têm introdução contextual sólida, tabelas, exemplos práticos, e referências a pastas de modelos (📁 Exemplo prático). Este não tem nenhuma dessas referências, nenhuma tabela, e a introdução é genérica. Visualmente e estruturalmente destoa do padrão estabelecido.
+
+O que sugerir para melhoria
+
+Reposicionar o documento: deixar claro na introdução que o escopo é segurança da informação ampla, com LGPD como um dos contextos — não o único.
+Adicionar uma seção de IAM com exemplos de ferramentas e conceitos de SSO e federação de identidade.
+Criar seção dedicada a PAM — contas privilegiadas merecem tratamento separado.
+Expandir o offboarding para um checklist operacional real.
+Incluir acesso físico como dimensão do controle de acessos.
+Referenciar frameworks: ISO 27001 (A.9), NIST SP 800-53, CIS Control 5 e 6 — sem precisar aprofundar, mas sinalizando que o tema tem respaldo técnico além da lei.
+Adicionar exemplos de ferramentas em cada seção relevante, como nos outros documentos.
+Incluir referências a modelos e exemplos práticos, alinhando com o padrão da pasta de modelos do projeto.
+
+
+Resumo
+O material é funcional como checklist básico, mas está aquém do padrão e do objetivo da etapa. Funciona como rascunho de partida, não como entrega final. Precisa de expansão técnica, exemplos práticos e reposicionamento do foco para além da LGPD.
