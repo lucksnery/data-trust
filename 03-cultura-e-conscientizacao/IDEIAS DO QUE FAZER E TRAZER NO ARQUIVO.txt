@@ -25,4 +25,94 @@ Recompensa simbólica para quem reportar tentativa de phishing real (INTERESSANT
 Vídeos curtos internos (formato reels) sobre boas práticas (Internamente somente)
 Segurança em viagens corporativas — dispositivos em trânsito, redes de hotel, fronteiras
 
+--------------------------------------------------------
+
+Enviei tudo para a IA, pedi as informações organizadas por sequencia, em módulos, pedi para ser livre e fazer do jeito que ela quisesse, remover coisa duplicada, etc. 
+
+---------------------------------------------------
+
+MÓDULO 1 — FUNDAMENTOS E POLÍTICAS
+
+1.1 Política de uso aceitável de recursos de TI
+(Pelo que entendi, uso correto dos recursos, hardware, software, etc...)
+Explicar o que é, do que se trata, como comportar...
+
+1.2 Classificação da informação
+Público / Interno / Confidencial / Restrito
+Explicar o que é, do que se trata, como comportar...
+
+
+MÓDULO 2 — COMPORTAMENTOS SEGUROS NO DIA A DIA
+
+2.1 Gestão de senhas e autenticação
+
+2.2 Mesa limpa e tela limpa
+
+2.3 Descarte seguro de informações físicas e digitais
+
+2.4 Uso seguro de e-mail e comunicadores corporativos
+
+2.5 Redes sociais e exposição de informações corporativas
+
+MÓDULO 3 — AMEAÇAS E COMO AGIR
+
+3.1 Engenharia social e phishing — como reconhecer e o que fazer
+
+3.2 Reporte de incidentes — cultura de não punição ao erro
+
+MÓDULO 4 — AMBIENTES E CONTEXTOS ESPECÍFICOS
+
+4.1 Uso de dispositivos pessoais (BYOD)
+
+4.2 Trabalho remoto e redes seguras
+
+4.3 Segurança em viagens corporativas
+Dispositivos em trânsito, redes de hotel, passagem por fronteiras
+
+MÓDULO 5 — INTEGRAÇÃO E CAPACITAÇÃO CONTÍNUA
+
+5.1 Onboarding de segurança para novos colaboradores
+
+5.2 Trilha de treinamento periódico e reciclagem
+
+MÓDULO 6 — ATIVIDADES DE ENGAJAMENTO
+
+6.1 Plataforma de e-learning gamificada com ranking de pontuação
+Dar exemplos de ferramentas do mercado.
+
+6.3 Simulações de phishing com página educativa no clique
+Dar exemplo de como fazer, contratar um domínio XYZ, coletar informações de quem clicou, etc.
+
+6.4 Newsletter interna periódica sobre temas de segurança
+Criar uma lista de tópicos/Assuntos para falar sobre. 
+
+6.5 Campanha temática mensal — um tema por mês, comunicação progressiva
+Criar uma lista de tópicos. 
+
+6.6 Certificado de conclusão de trilhas
+
+6.7 Recompensa simbólica para reporte de tentativas reais de phishing
+
+6.8 Vídeos curtos internos (formato reels) sobre boas práticas
+Vibe estilo videos feitos pelo time de marketing.
+
+-----------------------------------------------------------------------
+
+Baseado na estrutura que montamos para o programa de Conscientização em Segurança, quero definir quais entregas documentais vamos gerar. Na etapa de LGPD, o resultado foi um documento principal em MD com o conteúdo completo, mais uma pasta de modelos e exemplos contendo documentos auxiliares, prints e referências visuais. Quero replicar essa mesma lógica aqui. Me sugira quais seriam o documento principal, os documentos auxiliares e o que entraria na pasta de modelos e exemplos para essa etapa de Cultura e Educação em Segurança da Informação.
+
+------------------------------------------------------------------
+
+Não gostei de NADA QUE ELE ENVIOU. Vou fazer tudo somente em um único arquivo .MD
+
+-----------------------------------------------------------------
+
+Com base nos tópicos organizados para a etapa de Cultura e Educação que você acabou de me entregar, quero gerar um arquivo MD completo seguindo o mesmo padrão do documento que já temos pronto para a etapa de adequações LGPD. Cada módulo deve ter explicação do tema, e onde eu incluí comentários nos tópicos, use como instrução para o formato: se o comentário pede lista, faça lista; se pede tabela, faça tabela. Vou colar abaixo os tópicos com os comentários
+
+"Dei um CTRL C+ V no conteúdo ali dos TOPICOS, adicionei alguns comentários igual ta lá em cima, e mandei."
+
+--------------------------------------------------------------------
+
+
+
+
 
