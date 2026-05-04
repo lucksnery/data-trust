@@ -1,8 +1,8 @@
 # Controle de Acessos — Guia de Diagnóstico e Ação
 
-Este documento orienta o executor do projeto na estruturação e implementação de um programa de controle de acessos dentro da empresa. O escopo é segurança da informação — a LGPD aparece como contexto legal aplicável, não como único referencial. Frameworks como ISO 27001 (controles A.9 e A.5), NIST SP 800-53 e CIS Controls 5 e 6 orientam as boas práticas aqui descritas.
+Este documento orienta o executor do projeto na estruturação e implementação de um programa de controle de acessos dentro da empresa. O escopo é segurança da informação — a [LGPD (Lei Geral de Proteção de Dados)](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) aparece como contexto legal aplicável, não como único referencial. Frameworks como [ISO 27001](https://pt.wikipedia.org/wiki/ISO/IEC_27001) (controles A.9 e A.5), [NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) e [CIS Controls](https://www.cisecurity.org/cis-controls) 5 e 6 orientam as boas práticas aqui descritas.
 
-O princípio central que guia este documento é o **Zero Trust**: nunca confie, sempre verifique. Em vez de presumir que tudo dentro do perímetro corporativo é seguro, o modelo Zero Trust trata cada acesso — independentemente de origem, dispositivo ou usuário — como potencialmente não confiável até que seja verificado. Esse paradigma é especialmente relevante em ambientes com trabalho remoto, uso de cloud e múltiplos fornecedores com acesso a sistemas internos.
+O princípio central que guia este documento é o **[Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_security_model)**: nunca confie, sempre verifique. Em vez de presumir que tudo dentro do perímetro corporativo é seguro, o modelo Zero Trust trata cada acesso — independentemente de origem, dispositivo ou usuário — como potencialmente não confiável até que seja verificado. Esse paradigma é especialmente relevante em ambientes com trabalho remoto, uso de cloud e múltiplos fornecedores com acesso a sistemas internos.
 
 A abordagem é sequencial: cada etapa começa com um diagnóstico e direciona para ações práticas de adequação.
 
@@ -37,9 +37,9 @@ Não é possível proteger o que não se conhece. Antes de controlar acessos, é
 
 | Ferramenta | Tipo | Para que serve |
 |---|---|---|
-| Netwrix Auditor | Pago | Auditoria de acessos em AD, arquivos e sistemas |
+| Netwrix Auditor | Pago | Auditoria de acessos em [AD](https://pt.wikipedia.org/wiki/Active_Directory), arquivos e sistemas |
 | SolarWinds Access Rights Manager | Pago | Mapeamento e auditoria de permissões em ambientes Windows |
-| ManageEngine ADManager Plus | Pago | Gestão e auditoria de acessos no Active Directory |
+| ManageEngine ADManager Plus | Pago | Gestão e auditoria de acessos no [Active Directory](https://pt.wikipedia.org/wiki/Active_Directory) |
 | Google Workspace Admin | Nativo | Mapeamento de acessos em ambientes Google |
 | Microsoft Entra ID (Azure AD) | Nativo/Pago | Mapeamento e gestão de identidades em ambientes Microsoft |
 
@@ -49,7 +49,7 @@ Não é possível proteger o que não se conhece. Antes de controlar acessos, é
 
 ### 1.2 Definição de perfis de acesso — RBAC
 
-Acesso genérico é acesso excessivo. O modelo RBAC (Role-Based Access Control) organiza permissões por função — não por pessoa. Cada cargo ou perfil tem um conjunto fixo de permissões, e o colaborador herda as permissões do seu perfil.
+Acesso genérico é acesso excessivo. O modelo [RBAC (Role-Based Access Control)](https://pt.wikipedia.org/wiki/Controle_de_acesso_baseado_em_fun%C3%A7%C3%A3o) organiza permissões por função — não por pessoa. Cada cargo ou perfil tem um conjunto fixo de permissões, e o colaborador herda as permissões do seu perfil.
 
 **O que fazer:**
 
@@ -95,7 +95,7 @@ Controle de acessos não é só digital. Salas de servidores, armários de equip
 **O que fazer:**
 
 - Mapear todos os espaços físicos que contêm equipamentos, documentos ou infraestrutura crítica
-- Implementar controle de entrada com crachá, biometria ou PIN para áreas restritas
+- Implementar controle de entrada com crachá, [biometria](https://pt.wikipedia.org/wiki/Biometria) ou PIN para áreas restritas
 - Manter registro de entrada e saída em áreas sensíveis (log físico ou eletrônico)
 - Restringir o acesso à sala de servidores apenas ao time de TI autorizado — nunca acesso irrestrito a toda a equipe técnica
 - Garantir que visitantes e terceiros sejam sempre acompanhados em áreas restritas
@@ -146,7 +146,7 @@ Senha sozinha não é suficiente para sistemas com dados sensíveis ou acesso re
 **Onde ativar obrigatoriamente:**
 
 - E-mail corporativo
-- VPN e acesso remoto
+- [VPN](https://pt.wikipedia.org/wiki/Red_privada_virtual) e acesso remoto
 - Sistemas com dados pessoais ou financeiros
 - Painel de administração de qualquer plataforma
 - Ambientes cloud (AWS, Azure, GCP, Google Workspace, Microsoft 365)
@@ -156,10 +156,10 @@ Senha sozinha não é suficiente para sistemas com dados sensíveis ou acesso re
 
 | Método | Segurança | Observação |
 |---|---|---|
-| Chave de segurança física (YubiKey, Titan Key) | Muito alta | Resistente a phishing; recomendado para acessos críticos |
+| Chave de segurança física (YubiKey, Titan Key) | Muito alta | Resistente a [phishing](https://pt.wikipedia.org/wiki/Phishing); recomendado para acessos críticos |
 | Aplicativo autenticador (Google Authenticator, Microsoft Authenticator, Authy) | Alta | Padrão recomendado para a maioria dos casos |
-| Push notification (Duo, Microsoft Authenticator) | Alta | Conveniente, mas vulnerável a fadiga de MFA (push bombing) |
-| SMS / ligação telefônica | Baixa | Evitar — vulnerável a SIM swapping |
+| Push notification (Duo, Microsoft Authenticator) | Alta | Conveniente, mas vulnerável a fadiga de [MFA (push bombing)](https://en.wikipedia.org/wiki/Fatigue_attack) |
+| SMS / ligação telefônica | Baixa | Evitar — vulnerável a [SIM swapping](https://pt.wikipedia.org/wiki/SIM_swap_scam) |
 
 **Referência:** ISO 27001 — Controle A.9.4.2, LGPD Art. 46º (medidas técnicas de segurança).
 
@@ -167,7 +167,7 @@ Senha sozinha não é suficiente para sistemas com dados sensíveis ou acesso re
 
 ### 2.3 Gestão centralizada de identidades (IAM / IdP)
 
-Em ambientes com múltiplos sistemas, cada um com sua própria gestão de usuários, o controle fragmentado é inviável. Uma plataforma de Identity and Access Management (IAM) centraliza a criação, gestão e revogação de identidades, e um Identity Provider (IdP) permite que o colaborador acesse todos os sistemas com uma única identidade verificada — conceito conhecido como Single Sign-On (SSO).
+Em ambientes com múltiplos sistemas, cada um com sua própria gestão de usuários, o controle fragmentado é inviável. Uma plataforma de [Identity and Access Management (IAM)](https://pt.wikipedia.org/wiki/Identity_and_access_management) centraliza a criação, gestão e revogação de identidades, e um Identity Provider (IdP) permite que o colaborador acesse todos os sistemas com uma única identidade verificada — conceito conhecido como [Single Sign-On (SSO)](https://pt.wikipedia.org/wiki/Single_sign-on).
 
 **Por que isso importa:**
 
@@ -252,8 +252,8 @@ Contas privilegiadas — administradores de sistemas, contas root, contas de ser
 
 - Administradores devem ter duas contas separadas: uma conta comum para uso cotidiano (e-mail, navegação) e uma conta privilegiada exclusivamente para tarefas administrativas
 - A conta privilegiada não deve ser usada para acesso a e-mail, navegação ou qualquer atividade não administrativa
-- MFA obrigatório para todas as contas privilegiadas — sem exceção
-- Acessos privilegiados devem ser concedidos de forma temporária (Just-in-Time) quando possível: o administrador solicita o acesso, executa a tarefa, e o acesso expira automaticamente
+- [MFA](https://pt.wikipedia.org/wiki/Autentica%C3%A7%C3%A3o_multifatorial) obrigatório para todas as contas privilegiadas — sem exceção
+- Acessos privilegiados devem ser concedidos de forma temporária ([Just-in-Time](https://en.wikipedia.org/wiki/Just-in-time_access)) quando possível: o administrador solicita o acesso, executa a tarefa, e o acesso expira automaticamente
 - Senhas de contas privilegiadas devem ser rotacionadas periodicamente e armazenadas em cofre de senhas seguro
 
 ---
@@ -263,7 +263,7 @@ Contas privilegiadas — administradores de sistemas, contas root, contas de ser
 | Ferramenta | Destaque | Modelo |
 |---|---|---|
 | CyberArk | Referência de mercado para grandes empresas, cofre de credenciais + gravação de sessão | Pago |
-| BeyondTrust | PAM completo com acesso remoto seguro integrado | Pago |
+| BeyondTrust | [PAM](https://en.wikipedia.org/wiki/Privileged_access_management) completo com acesso remoto seguro integrado | Pago |
 | Delinea (ex-Thycotic) | Boa relação custo-benefício para PMEs | Pago |
 | HashiCorp Vault | Open source, forte para gestão de secrets e credenciais de API | Gratuito / Pago (Enterprise) |
 | Teleport | PAM para ambientes cloud-native e DevOps | Gratuito / Pago |
@@ -324,11 +324,11 @@ Registrar não basta — é preciso analisar. Um log que nunca é lido não dete
 
 | Ferramenta | Tipo | Destaque |
 |---|---|---|
-| Microsoft Sentinel | SIEM cloud | Integrado ao ecossistema Microsoft, boa cobertura para M365 e Azure |
+| Microsoft Sentinel | [SIEM](https://pt.wikipedia.org/wiki/SIEM) cloud | Integrado ao ecossistema Microsoft, boa cobertura para M365 e Azure |
 | Splunk | SIEM | Referência de mercado, altamente customizável |
 | IBM QRadar | SIEM | Forte em correlação de eventos e ambientes complexos |
 | Elastic Security (ELK Stack) | Open source | Customizável, exige capacidade técnica interna |
-| Wazuh | Open source | SIEM + EDR open source, boa opção para PMEs com equipe técnica |
+| Wazuh | Open source | SIEM + [EDR](https://en.wikipedia.org/wiki/Endpoint_detection_and_response) open source, boa opção para PMEs com equipe técnica |
 | Datadog Security | SaaS | Forte para ambientes cloud-native e DevOps |
 
 **Referência:** ISO 27001 — Controle A.12.4, LGPD Art. 46º e Art. 48º.
@@ -411,7 +411,7 @@ Contas de serviço são credenciais usadas por sistemas, scripts ou automações
 
 ## 7. A empresa controla acessos em ambientes cloud?
 
-Ambientes cloud — AWS, Azure, Google Cloud, plataformas SaaS — têm especificidades próprias no controle de acessos que não se resolvem com as mesmas ferramentas e processos usados em ambientes on-premise. Permissões mal configuradas em cloud são uma das causas mais comuns de exposição de dados.
+Ambientes [cloud](https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_nuvem) — AWS, Azure, Google Cloud, plataformas SaaS — têm especificidades próprias no controle de acessos que não se resolvem com as mesmas ferramentas e processos usados em ambientes on-premise. Permissões mal configuradas em cloud são uma das causas mais comuns de exposição de dados.
 
 - **Se a empresa usa serviços cloud:** seguir os itens 7.1 e 7.2.
 - **Se não usa:** ignorar esta etapa e avançar para a etapa 8.
@@ -443,7 +443,7 @@ Cada plataforma SaaS usada pela empresa (Salesforce, HubSpot, Notion, Slack, fer
 - Manter inventário de todas as plataformas SaaS em uso e os usuários com acesso em cada uma
 - Garantir que o provisionamento e desprovisionamento de usuários em plataformas SaaS esteja integrado ao IdP (SSO) quando possível — para que o offboarding revogue automaticamente esses acessos
 - Para plataformas não integradas ao SSO, criar processo manual de revisão e revogação de acessos no offboarding
-- Revisar periodicamente quais aplicativos terceiros têm permissão de acesso às contas corporativas (OAuth apps) — revogar os que não são mais usados ou não têm justificativa
+- Revisar periodicamente quais aplicativos terceiros têm permissão de acesso às contas corporativas ([OAuth](https://pt.wikipedia.org/wiki/OAuth) apps) — revogar os que não são mais usados ou não têm justificativa
 
 ---
 
@@ -460,7 +460,7 @@ Sem formalização, o processo não é sustentável. Boas práticas aplicadas de
 
 **O que a política deve conter:**
 
-- Princípios orientadores: menor privilégio, Zero Trust, separação de funções
+- Princípios orientadores: [menor privilégio](https://en.wikipedia.org/wiki/Principle_of_least_privilege), [Zero Trust](https://en.wikipedia.org/wiki/Zero_trust_security_model), [separação de funções](https://en.wikipedia.org/wiki/Separation_of_duties)
 - Regras de concessão de acesso: quem pode solicitar, quem aprova, prazo de atendimento
 - Critérios de autenticação: requisitos de senha e MFA por tipo de sistema
 - Regras para contas privilegiadas: dupla conta, Just-in-Time, cofre de credenciais
@@ -497,7 +497,7 @@ Este tema deve estar integrado ao programa de Cultura e Educação em Segurança
 - Como funciona o MFA e por que ele é necessário mesmo para quem "não tem nada importante para esconder"
 - O que fazer ao receber uma solicitação de acesso informal de um colega ou superior
 - Como reportar quando suspeitar que uma credencial foi comprometida
-- O que é engenharia social aplicada a acessos: pretexting, shoulder surfing, tailgating (seguir alguém por uma porta de acesso restrito)
+- O que é [engenharia social](https://pt.wikipedia.org/wiki/Engenharia_social_(seguran%C3%A7a)) aplicada a acessos: [pretexting](https://en.wikipedia.org/wiki/Pretexting), [shoulder surfing](https://en.wikipedia.org/wiki/Shoulder_surfing_(security)), [tailgating](https://en.wikipedia.org/wiki/Tailgating_(security)) (seguir alguém por uma porta de acesso restrito)
 - Responsabilidades do colaborador sobre os acessos que possui: acesso não é propriedade, é concessão temporária vinculada à função
 
 ---
