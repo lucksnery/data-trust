@@ -13,3 +13,5 @@ A principio, achei ótimo e ficou muito bom! Tava alinhadinho conforme fizemos n
 Ok, refaça o documento fazendo as adequações conforme sua visão. Pode alimentar o documento com tabelas, listas, etc. igual fizemos anteriormente recentemente na etapa de Cultura e Educacao. Faz ai e me entrega em .md
 
 -----------------------------------------------------------------------
+
+Existem melhorias a ser feitas, aquele esquema do link dos termos, como Zero Trust, etc. 
