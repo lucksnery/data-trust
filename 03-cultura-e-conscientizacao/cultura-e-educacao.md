@@ -1,6 +1,6 @@
 # Cultura e Educação em Segurança da Informação
 
-Este documento orienta o executor do projeto na estruturação e implementação de um programa de conscientização em segurança da informação. A abordagem é modular: cada tema traz uma explicação objetiva do que é, por que importa e como agir. O objetivo não é apenas informar colaboradores, mas construir uma cultura organizacional onde a segurança é praticada no dia a dia — e não tratada como responsabilidade exclusiva do time de TI.
+Este documento orienta o executor do projeto na estruturação e implementação de um programa de conscientização em [segurança da informação](https://pt.wikipedia.org/wiki/Seguran%C3%A7a_da_informa%C3%A7%C3%A3o). A abordagem é modular: cada tema traz uma explicação objetiva do que é, por que importa e como agir. O objetivo não é apenas informar colaboradores, mas construir uma cultura organizacional onde a segurança é praticada no dia a dia — e não tratada como responsabilidade exclusiva do time de TI.
 
 ---
 
@@ -21,13 +21,13 @@ Ela existe porque o uso inadequado de recursos de TI é uma das principais porta
 - Armazenamento e compartilhamento de arquivos e dados
 - Uso de dispositivos externos (pendrives, HDs externos)
 - Acesso remoto a sistemas da empresa
-- Proibições explícitas: pirataria, acesso a conteúdo ilegal, compartilhamento de credenciais
+- Proibições explícitas: [pirataria](https://pt.wikipedia.org/wiki/Pirataria_de_software), acesso a conteúdo ilegal, compartilhamento de credenciais
 
 **Como agir:**
 
 - A política deve ser apresentada no onboarding de todo novo colaborador
 - O colaborador deve assinar um termo de ciência e aceite
-- A política deve estar disponível em local de fácil acesso (intranet, drive interno)
+- A política deve estar disponível em local de fácil acesso ([intranet](https://pt.wikipedia.org/wiki/Intranet), drive interno)
 - Revisão mínima anual ou sempre que houver mudança relevante no ambiente tecnológico da empresa
 
 ---
@@ -45,7 +45,7 @@ Sem classificação, qualquer informação pode ser compartilhada com qualquer p
 | **Público** | Informações que podem ser divulgadas livremente sem qualquer risco | Site institucional, comunicados de imprensa, material de marketing aprovado | Qualquer pessoa, incluindo o público externo |
 | **Interno** | Informações de uso interno que não devem sair da empresa, mas sem alto grau de sensibilidade | Procedimentos internos, comunicados gerais, organogramas, políticas internas | Todos os colaboradores |
 | **Confidencial** | Informações sensíveis cujo vazamento pode causar danos significativos à empresa ou a terceiros | Dados de clientes, contratos, informações financeiras, estratégias comerciais, dados de RH | Colaboradores com necessidade direta de acesso (need-to-know) |
-| **Restrito** | Informações de altíssima sensibilidade, acesso extremamente limitado | Segredos industriais, fusões e aquisições, dados de acesso a sistemas críticos, investigações internas | Apenas pessoas explicitamente autorizadas |
+| **Restrito** | Informações de altíssima sensibilidade, acesso extremamente limitado | [Segredos industriais](https://pt.wikipedia.org/wiki/Segredo_comercial), fusões e aquisições, dados de acesso a sistemas críticos, investigações internas | Apenas pessoas explicitamente autorizadas |
 
 **Como agir:**
 
@@ -68,12 +68,12 @@ Senhas fracas ou reutilizadas são a causa de uma parcela significativa dos aces
 - Nunca reutilize a mesma senha em sistemas diferentes
 - Nunca compartilhe sua senha com colegas, mesmo em situações de urgência
 - Troque senhas imediatamente caso suspeite de comprometimento
-- Não anote senhas em papéis, post-its ou arquivos de texto sem proteção
-- Utilize um gerenciador de senhas para armazenar e gerar credenciais com segurança (ex: Bitwarden, 1Password, Keeper)
+- Não anote senhas em papéis, [post-its](https://pt.wikipedia.org/wiki/Post-it) ou arquivos de texto sem proteção
+- Utilize um [gerenciador de senhas](https://pt.wikipedia.org/wiki/Gerenciador_de_senhas) para armazenar e gerar credenciais com segurança (ex: Bitwarden, 1Password, Keeper)
 
-**Autenticação de dois fatores (2FA):**
+**[Autenticação de dois fatores (2FA)](https://pt.wikipedia.org/wiki/Autentica%C3%A7%C3%A3o_multifatorial):**
 
-- Ative o 2FA em todos os sistemas que oferecerem essa opção, especialmente e-mail corporativo, VPN e sistemas críticos
+- Ative o 2FA em todos os sistemas que oferecerem essa opção, especialmente e-mail corporativo, [VPN](https://pt.wikipedia.org/wiki/Red_privada_virtual) e sistemas críticos
 - Prefira aplicativos autenticadores (Google Authenticator, Microsoft Authenticator, Authy) em vez de SMS, que é menos seguro
 - Nunca compartilhe códigos de autenticação com ninguém — nenhum sistema legítimo pedirá esse código por telefone ou e-mail
 
@@ -118,27 +118,27 @@ Informações descartadas de forma inadequada são um vetor real de vazamento de
 
 ### 2.4 Uso seguro de e-mail e comunicadores corporativos
 
-O e-mail e os comunicadores corporativos são os principais canais de comunicação — e também os principais alvos de ataques de phishing, engenharia social e vazamento acidental de dados.
+O e-mail e os comunicadores corporativos são os principais canais de comunicação — e também os principais alvos de ataques de [phishing](https://pt.wikipedia.org/wiki/Phishing), [engenharia social](https://pt.wikipedia.org/wiki/Engenharia_social_(seguran%C3%A7a)) e vazamento acidental de dados.
 
 **Boas práticas no e-mail:**
 
 - Verifique sempre o endereço completo do remetente antes de clicar em qualquer link ou abrir anexos
-- Desconfie de e-mails com urgência excessiva, erros de português, links encurtados ou solicitações fora do padrão
-- Nunca encaminhe informações confidenciais por e-mail sem criptografia ou aprovação do gestor
+- Desconfie de e-mails com urgência excessiva, erros de português, [links encurtados](https://pt.wikipedia.org/wiki/Encurtador_de_URL) ou solicitações fora do padrão
+- Nunca encaminhe informações confidenciais por e-mail sem [criptografia](https://pt.wikipedia.org/wiki/Criptografia) ou aprovação do gestor
 - Evite usar o e-mail corporativo para cadastros em serviços pessoais
 - Não responda a e-mails suspeitos — em caso de dúvida, reporte ao time de segurança (ver item 3.2)
 
 **Boas práticas em comunicadores (Slack, Teams, WhatsApp corporativo):**
 
-- Não compartilhe senhas, tokens de acesso ou dados confidenciais por mensagem, mesmo em canais internos
+- Não compartilhe senhas, [tokens](https://pt.wikipedia.org/wiki/Token) de acesso ou dados confidenciais por mensagem, mesmo em canais internos
 - Confirme a identidade do interlocutor antes de executar qualquer solicitação recebida por mensagem, especialmente pedidos de transferência, acesso ou aprovação
 - Lembre-se: comunicadores corporativos podem ser auditados — use-os de forma profissional
 
 ---
 
-### 2.5 Redes sociais e exposição de informações corporativas
+### 2.5 [Redes sociais](https://pt.wikipedia.org/wiki/Rede_social) e exposição de informações corporativas
 
-Colaboradores são, involuntariamente, uma das principais fontes de vazamento de informações corporativas nas redes sociais. Fotos de escritório, prints de sistemas, menções a clientes ou projetos, comentários sobre decisões internas — tudo isso pode comprometer a empresa.
+Colaboradores são, involuntariamente, uma das principais fontes de vazamento de informações corporativas nas [redes sociais](https://pt.wikipedia.org/wiki/Rede_social). Fotos de escritório, prints de sistemas, menções a clientes ou projetos, comentários sobre decisões internas — tudo isso pode comprometer a empresa.
 
 **O que evitar:**
 
@@ -156,16 +156,16 @@ Colaboradores são, involuntariamente, uma das principais fontes de vazamento de
 
 ## Módulo 3 — Ameaças e Como Agir
 
-### 3.1 Engenharia social e phishing — como reconhecer e o que fazer
+### 3.1 [Engenharia social](https://pt.wikipedia.org/wiki/Engenharia_social_(seguran%C3%A7a)) e [phishing](https://pt.wikipedia.org/wiki/Phishing) — como reconhecer e o que fazer
 
-Engenharia social é a manipulação psicológica de pessoas para que realizem ações ou forneçam informações que não deveriam. O phishing é a forma mais comum: e-mails, mensagens ou ligações que imitam fontes confiáveis para roubar credenciais, instalar malware ou induzir transferências.
+Engenharia social é a manipulação psicológica de pessoas para que realizem ações ou forneçam informações que não deveriam. O phishing é a forma mais comum: e-mails, mensagens ou ligações que imitam fontes confiáveis para roubar credenciais, instalar [malware](https://pt.wikipedia.org/wiki/Malware) ou induzir transferências.
 
 **Como reconhecer:**
 
 - **Urgência artificial:** "Sua conta será bloqueada em 24 horas", "Ação imediata necessária"
 - **Remetente suspeito:** o nome exibido parece legítimo, mas o endereço de e-mail real é diferente (ex: suporte@empresa-segura.com.br em vez de @empresa.com.br)
 - **Links disfarçados:** o texto do link parece correto, mas ao passar o cursor o endereço real é diferente
-- **Anexos inesperados:** arquivos .exe, .zip, .docm ou PDFs não solicitados
+- **[Anexos](https://pt.wikipedia.org/wiki/Attachment_(e-mail)) inesperados:** arquivos .exe, .zip, .docm ou PDFs não solicitados
 - **Solicitações incomuns:** pedidos de senha, transferência financeira, acesso a sistemas ou dados fora do processo normal
 - **Erros de português ou formatação diferente do padrão da empresa**
 
@@ -207,19 +207,19 @@ Reportar um erro não gera punição — esconder gera. A empresa trata incident
 
 ### 4.1 Uso de dispositivos pessoais (BYOD)
 
-BYOD — Bring Your Own Device — é a prática de utilizar dispositivos pessoais (notebooks, smartphones, tablets) para acessar sistemas, e-mails ou dados corporativos. Quando não controlado, o BYOD representa um risco significativo: dispositivos pessoais raramente têm o mesmo nível de controle e proteção dos equipamentos corporativos.
+[BYOD](https://pt.wikipedia.org/wiki/Bring_your_own_device) — Bring Your Own Device — é a prática de utilizar dispositivos pessoais (notebooks, smartphones, tablets) para acessar sistemas, e-mails ou dados corporativos. Quando não controlado, o BYOD representa um risco significativo: dispositivos pessoais raramente têm o mesmo nível de controle e proteção dos equipamentos corporativos.
 
 **Riscos do BYOD sem controle:**
 
-- Dispositivos sem atualização de sistema operacional ou antivírus
+- Dispositivos sem atualização de sistema operacional ou [antivírus](https://pt.wikipedia.org/wiki/Antiv%C3%ADrus)
 - Aplicativos pessoais com acesso aos mesmos dados corporativos
 - Perda ou roubo sem possibilidade de bloqueio ou limpeza remota pela empresa
-- Mistura de dados pessoais e corporativos sem separação clara
+- Mistura de [dados pessoais](https://pt.wikipedia.org/wiki/Dado_pessoal) e corporativos sem separação clara
 
 **O que a empresa deve definir:**
 
-- Quais dispositivos e sistemas operacionais são permitidos para acesso corporativo
-- Requisitos mínimos de segurança: senha de bloqueio, criptografia de disco, sistema operacional atualizado
+- Quais dispositivos e [sistemas operacionais](https://pt.wikipedia.org/wiki/Sistema_operacional) são permitidos para acesso corporativo
+- Requisitos mínimos de segurança: senha de bloqueio, [criptografia de disco](https://pt.wikipedia.org/wiki/Criptografia_de_disco), sistema operacional atualizado
 - Quais sistemas e dados podem ser acessados por dispositivos pessoais
 - Processo de desvinculação do dispositivo em caso de desligamento do colaborador
 
@@ -238,17 +238,17 @@ O trabalho remoto expande o perímetro de segurança da empresa para fora do esc
 
 **Riscos do trabalho remoto:**
 
-- Redes Wi-Fi domésticas sem configuração adequada de segurança
+- Redes [Wi-Fi](https://pt.wikipedia.org/wiki/Wi-Fi) domésticas sem configuração adequada de segurança
 - Uso de redes públicas (cafeterias, aeroportos, hotéis) sem proteção
-- Acesso a sistemas críticos sem VPN
+- Acesso a sistemas críticos sem [VPN](https://pt.wikipedia.org/wiki/Red_privada_virtual)
 - Ausência de separação física entre ambiente pessoal e profissional
 
 **Boas práticas:**
 
-- Utilize sempre a VPN corporativa ao acessar sistemas internos da empresa, independentemente da rede
-- Em redes Wi-Fi domésticas, configure o roteador com senha forte e protocolo WPA3 ou WPA2
+- Utilize sempre a [VPN](https://pt.wikipedia.org/wiki/Red_privada_virtual) corporativa ao acessar sistemas internos da empresa, independentemente da rede
+- Em redes [Wi-Fi](https://pt.wikipedia.org/wiki/Wi-Fi) domésticas, configure o roteador com senha forte e protocolo [WPA3](https://pt.wikipedia.org/wiki/Wi-Fi_Protected_Access) ou WPA2
 - Nunca acesse sistemas corporativos em redes públicas abertas sem VPN ativa
-- Mantenha o roteador doméstico com firmware atualizado
+- Mantenha o roteador doméstico com [firmware](https://pt.wikipedia.org/wiki/Firmware) atualizado
 - Separe o ambiente de trabalho: não use o mesmo dispositivo para trabalho e uso pessoal intenso de forma simultânea, se possível
 
 ---
@@ -267,7 +267,7 @@ Dispositivos em trânsito são alvos. Em aeroportos, hotéis e eventos, as chanc
 **Durante a viagem:**
 
 - Nunca deixe dispositivos corporativos sem supervisão em quartos de hotel, veículos ou locais públicos
-- Não use carregadores USB públicos (USB charging stations em aeroportos e hotéis) — utilize sempre seu próprio carregador na tomada. O ataque via USB é conhecido como "juice jacking"
+- Não use carregadores [USB](https://pt.wikipedia.org/wiki/USB) públicos (USB charging stations em aeroportos e hotéis) — utilize sempre seu próprio carregador na tomada. O ataque via USB é conhecido como "[juice jacking](https://en.wikipedia.org/wiki/Juice_jacking)"
 - Evite conectar-se ao Wi-Fi do hotel para acessar sistemas corporativos sem VPN ativa
 - Em reuniões externas, atenção ao que está na tela — em locais públicos, considere o uso de filtro de privacidade (película anti-espião)
 - Não discuta informações confidenciais em locais públicos (voos, lobbies, restaurantes)
@@ -282,7 +282,7 @@ Dispositivos em trânsito são alvos. Em aeroportos, hotéis e eventos, as chanc
 
 ## Módulo 5 — Integração e Capacitação Contínua
 
-### 5.1 Onboarding de segurança para novos colaboradores
+### 5.1 [Onboarding](https://pt.wikipedia.org/wiki/Onboarding) de segurança para novos colaboradores
 
 O onboarding é o momento mais crítico para estabelecer a cultura de segurança. Um novo colaborador que começa com boas práticas tende a mantê-las — um que começa sem nenhuma orientação cria hábitos difíceis de corrigir.
 
@@ -326,7 +326,7 @@ A conscientização não é um evento único — é um processo contínuo. Amea�
 
 ### 6.1 Plataforma de e-learning gamificada com ranking de pontuação
 
-Uma plataforma de e-learning gamificada transforma o treinamento obrigatório em experiência mais engajante — com pontuação, conquistas, ranking entre colegas e trilhas com progressão visível. O formato combina aprendizado com competição saudável, aumentando a taxa de conclusão e retenção do conteúdo.
+Uma plataforma de [e-learning](https://pt.wikipedia.org/wiki/E-learning) gamificada transforma o treinamento obrigatório em experiência mais engajante — com pontuação, conquistas, ranking entre colegas e trilhas com progressão visível. O formato combina aprendizado com competição saudável, aumentando a taxa de conclusão e retenção do conteúdo.
 
 **Exemplos de plataformas disponíveis no mercado:**
 
@@ -336,9 +336,9 @@ Uma plataforma de e-learning gamificada transforma o treinamento obrigatório em
 | **Proofpoint Security Awareness** | Trilhas personalizáveis, integração com simulações | Pago |
 | **Mimecast Awareness Training** | Vídeos curtos, quizzes e relatórios por departamento | Pago |
 | **Cofense** | Foco em phishing e resposta a incidentes | Pago |
-| **TalentLMS** | Plataforma genérica de LMS com suporte a gamificação, usada para construir trilhas customizadas | Pago (plano gratuito limitado) |
+| **TalentLMS** | Plataforma genérica de [LMS](https://pt.wikipedia.org/wiki/Learning_management_system) com suporte a gamificação, usada para construir trilhas customizadas | Pago (plano gratuito limitado) |
 | **iSpring Learn** | Criação de cursos próprios com gamificação e relatórios | Pago |
-| **Moodle** | Open source, altamente customizável, exige configuração interna | Gratuito |
+| **Moodle** | [Open source](https://pt.wikipedia.org/wiki/C%C3%B3digo_aberto), altamente customizável, exige configuração interna | Gratuito |
 
 ---
 
@@ -357,11 +357,11 @@ Um quiz mensal de 5 a 10 perguntas sobre o tema de segurança do mês, distribu�
 
 ### 6.3 Simulações de phishing com página educativa no clique
 
-A simulação de phishing é a forma mais eficaz de medir e melhorar a resiliência dos colaboradores contra ataques reais. Consiste em enviar e-mails falsos, criados internamente ou via plataforma especializada, e monitorar quem clica, quem reporta e quem ignora.
+A simulação de [phishing](https://pt.wikipedia.org/wiki/Phishing) é a forma mais eficaz de medir e melhorar a resiliência dos colaboradores contra ataques reais. Consiste em enviar e-mails falsos, criados internamente ou via plataforma especializada, e monitorar quem clica, quem reporta e quem ignora.
 
 **Como executar uma simulação:**
 
-1. **Contratar um domínio de simulação:** registre um domínio que imite o da empresa com pequena variação (ex: empresa-suporte.com.br, empresasegura.com). Use registradores como Registro.br, GoDaddy ou Cloudflare.
+1. **Contratar um domínio de simulação:** registre um domínio que imite o da empresa com pequena variação (ex: empresa-suporte.com.br, empresasegura.com). Use registradores como [Registro.br](https://www.registro.br/), [GoDaddy](https://www.godaddy.com/) ou [Cloudflare](https://www.cloudflare.com/).
 
 2. **Criar o e-mail de phishing simulado:** imite comunicações reais da empresa (RH, TI, financeiro). Inclua um link apontando para o domínio de simulação. Elementos típicos: urgência, pedido de atualização de senha, confirmação de dados, boleto em anexo.
 
@@ -391,20 +391,20 @@ Uma newsletter interna leve, com periodicidade quinzenal ou mensal, mantém o te
 **Lista de temas para pautar ao longo do ano:**
 
 - Como criar e gerenciar senhas fortes — e por que seu nome + ano de nascimento não funciona
-- O que é phishing e como ele evoluiu: do e-mail genérico ao ataque direcionado (spear phishing)
-- Engenharia social no telefone: o golpe do "suporte técnico" e como se proteger
-- Wi-Fi público: o que realmente acontece quando você se conecta sem VPN
+- O que é [phishing](https://pt.wikipedia.org/wiki/Phishing) e como ele evoluiu: do e-mail genérico ao ataque direcionado ([spear phishing](https://en.wikipedia.org/wiki/Phishing#Spear_phishing))
+- [Engenharia social](https://pt.wikipedia.org/wiki/Engenharia_social_(seguran%C3%A7a)) no telefone: o golpe do "suporte técnico" e como se proteger
+- [Wi-Fi](https://pt.wikipedia.org/wiki/Wi-Fi) público: o que realmente acontece quando você se conecta sem [VPN](https://pt.wikipedia.org/wiki/Red_privada_virtual)
 - Classificação da informação: o que você pode e não pode compartilhar
 - Segurança no home office: roteador, VPN e mesa limpa fora do escritório
-- Golpes via WhatsApp e SMS (smishing): como reconhecer e o que fazer
+- Golpes via WhatsApp e SMS ([smishing](https://en.wikipedia.org/wiki/Smishing)): como reconhecer e o que fazer
 - Senhas reutilizadas: por que uma senha vazada pode comprometer tudo
 - Atualização de sistemas: por que o botão "lembrar mais tarde" é um risco
-- Backup: o que acontece quando você não tem — e quando o ransomware chega
+- [Backup](https://pt.wikipedia.org/wiki/Backup): o que acontece quando você não tem — e quando o [ransomware](https://pt.wikipedia.org/wiki/Ransomware) chega
 - Segurança em redes sociais: o que você publica pode comprometer a empresa
-- QR Codes maliciosos: o novo vetor de phishing que passa despercebido
+- [QR Codes](https://pt.wikipedia.org/wiki/Código_QR) maliciosos: o novo vetor de phishing que passa despercebido
 - Cuidados com dispositivos em viagens corporativas
 - Como reportar um incidente: o que fazer nos primeiros minutos
-- Deepfakes e IA em ataques: o próximo nível de engenharia social
+- [Deepfakes](https://en.wikipedia.org/wiki/Deepfake) e [IA](https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial) em ataques: o próximo nível de engenharia social
 - Segurança física: quem entrou no escritório atrás de você?
 
 ---
@@ -447,7 +447,7 @@ Certificados de conclusão de trilhas de treinamento incentivam o engajamento ao
 
 - Emitir certificado ao concluir a trilha base obrigatória e os módulos específicos de perfil
 - O certificado deve conter: nome do colaborador, nome da trilha, carga horária, data de conclusão e assinatura do responsável pelo programa
-- Disponibilizar em formato PDF para que o colaborador possa salvar e compartilhar no LinkedIn
+- Disponibilizar em formato PDF para que o colaborador possa salvar e compartilhar no [LinkedIn](https://www.linkedin.com/)
 
 **Plataformas com suporte a certificação:**
 
@@ -479,7 +479,7 @@ Vídeos curtos — entre 60 e 90 segundos — no formato vertical e dinâmico, p
 
 - Roteiro simples: apresente um problema real em 15 segundos, mostre o comportamento errado, mostre o correto, encerre com a mensagem principal
 - Gravação: pode ser feita com smartphone, boa iluminação e microfone de lapela — não é necessário estúdio
-- Edição: CapCut, DaVinci Resolve ou Premiere para cortes rápidos, legendas automáticas e trilha de fundo
+- Edição: [CapCut](https://www.capcut.com/), [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) ou [Premiere](https://www.adobe.com/products/premiere.html) para cortes rápidos, legendas automáticas e trilha de fundo
 - Identidade visual: manter a linguagem visual da empresa para não parecer conteúdo externo
 
 **Sugestões de temas para os primeiros vídeos:**
