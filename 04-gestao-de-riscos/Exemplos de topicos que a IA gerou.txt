@@ -1,3 +1,27 @@
+PROMPT:
+
+Estou na quarta e última etapa do projeto Data Trust, focada em Gestão de Riscos. Preciso que você gere uma estrutura de módulos sequenciais (1, 1.1, 1.2...) para o documento principal dessa etapa, seguindo o mesmo padrão adotado nas etapas anteriores do projeto.
+A estrutura deve cobrir os seguintes temas:
+
+Fundamentos de gestão de riscos
+Planos de tratamento de risco (mitigar, aceitar, transferir, evitar)
+Integração entre gestão de riscos e resposta a incidentes
+Backup (tipos, onde armazenar, testes de restauração)
+Plano de Continuidade de Negócios (BCP)
+Disaster Recovery (estratégias cold, warm e hot standby)
+Gestão de vulnerabilidades e patches
+Proteção contra malware e ransomware
+Segurança em ambientes de nuvem
+Cultura de gestão de riscos e conscientização
+Revisão e melhoria contínua
+
+Entregue apenas a estrutura de módulos com títulos — sem conteúdo ainda, pois vamos desenvolver cada módulo separadamente.
+
+
+
+-------------------------------------------------------------------------
+
+
 Gestão de Riscos e Continuidade — Estrutura de Módulos
 1. Fundamentos de Gestão de Riscos
 1.1 O que é gestão de riscos em segurança da informação
