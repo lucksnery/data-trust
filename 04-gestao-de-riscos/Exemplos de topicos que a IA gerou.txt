@@ -1,0 +1,68 @@
+PROMPT:
+
+Estou na quarta e última etapa do projeto Data Trust, focada em Gestão de Riscos. Preciso que você gere uma estrutura de módulos sequenciais (1, 1.1, 1.2...) para o documento principal dessa etapa, seguindo o mesmo padrão adotado nas etapas anteriores do projeto.
+A estrutura deve cobrir os seguintes temas:
+
+Fundamentos de gestão de riscos
+Planos de tratamento de risco (mitigar, aceitar, transferir, evitar)
+Integração entre gestão de riscos e resposta a incidentes
+Backup (tipos, onde armazenar, testes de restauração)
+Plano de Continuidade de Negócios (BCP)
+Disaster Recovery (estratégias cold, warm e hot standby)
+Gestão de vulnerabilidades e patches
+Proteção contra malware e ransomware
+Segurança em ambientes de nuvem
+Cultura de gestão de riscos e conscientização
+Revisão e melhoria contínua
+
+Entregue apenas a estrutura de módulos com títulos — sem conteúdo ainda, pois vamos desenvolver cada módulo separadamente.
+
+
+
+-------------------------------------------------------------------------
+
+
+Gestão de Riscos e Continuidade — Estrutura de Módulos
+1. Fundamentos de Gestão de Riscos
+1.1 O que é gestão de riscos em segurança da informação
+1.2 Identificação e classificação de ativos
+1.3 Inventário de ativos críticos
+
+2. Identificação e Avaliação de Riscos
+2.1 Como identificar ameaças e vulnerabilidades
+2.2 Matriz de risco (probabilidade x impacto)
+2.3 Priorização de riscos
+
+3. Backup e Recuperação de Dados
+3.1 Política de backup — o que, quando e como
+3.2 Tipos de backup (completo, incremental, diferencial)
+3.3 Onde armazenar os backups (local, nuvem, offsite)
+3.4 Testes de restauração — verificar se o backup funciona de verdade
+
+4. Continuidade de Negócios (BCP)
+4.1 O que é um Plano de Continuidade de Negócios
+4.2 Identificação de processos críticos
+4.3 Definição de RTO e RPO
+4.4 Plano de comunicação em crises
+
+5. Disaster Recovery (DR)
+5.1 O que é Disaster Recovery e quando acionar
+5.2 Estratégias de DR (cold, warm, hot standby)
+5.3 Criação do Plano de Disaster Recovery
+5.4 Testes e simulações do plano
+
+6. Prevenção e Monitoramento
+6.1 Monitoramento contínuo de sistemas e redes
+6.2 Gestão de vulnerabilidades e patches
+6.3 Proteção contra malware e ransomware
+6.4 Segurança em ambientes de nuvem
+
+7. Fornecedores e Terceiros
+7.1 Riscos associados a fornecedores e prestadores
+7.2 Avaliação de segurança de terceiros
+7.3 Cláusulas de continuidade em contratos
+
+8. Revisão e Melhoria Contínua
+8.1 Auditorias periódicas de risco
+8.2 Lições aprendidas pós-incidente
+8.3 Atualização do plano de riscos
