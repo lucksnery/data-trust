@@ -88,8 +88,6 @@ PLAN → DO → CHECK → ACT → (reinicia)
 /04-gestao-de-riscos
     gestao-de-riscos.md           ← guia principal de riscos e continuidade
 
-/05-progresso
-    index.html                    ← dashboard interativo de progresso (GitHub Pages)
 ```
 
 ---
