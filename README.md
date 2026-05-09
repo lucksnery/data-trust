@@ -81,41 +81,15 @@ PLAN → DO → CHECK → ACT → (reinicia)
 
 /02-controle-de-acessos
     controle-de-acessos.md        ← guia principal (modelo Zero Trust)
-    /exemplos                     ← modelos de matriz de acessos e perfis RBAC
-    /referencias                  ← ISO 27001, NIST, CIS Controls
 
 /03-cultura-e-conscientizacao
     cultura-educacao.md           ← guia principal de conscientização
-    /referencias
-        /Phishing e Engenharia Social
-        /Gestao de Senhas
-        /Simulacao de Phishing
-        /Newsletter de Seguranca
-        /Campanhas de Conscientizacao
-        /Plataformas de E-learning
-        /Onboarding de Seguranca
-        /Trilha de Treinamento
-        /BYOD
-        /Trabalho Remoto
-        /Descarte Seguro
-        /Seguranca em Viagens
 
 /04-gestao-de-riscos
     gestao-de-riscos.md           ← guia principal de riscos e continuidade
-    /exemplos
-        /Inventario de Ativos
-        /Risk Register
-        /Politica de Backup
-        /BCP
-        /Disaster Recovery
-        /Protecao contra Malware
-        /Seguranca em Nuvem
 
 /05-progresso
     index.html                    ← dashboard interativo de progresso (GitHub Pages)
-
-/uteis
-    glossario.md                  ← glossário de termos técnicos do framework
 ```
 
 ---
